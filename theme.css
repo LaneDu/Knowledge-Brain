@@ -823,7 +823,7 @@ div[data-subtype='t'][data-type='NodeList'] {
 /* .code-block .protyle-action {
     position: relative;
 } */
-
+/*mac图标*/
 .code-block:before {
     content: ' ';
     position: absolute;
@@ -845,9 +845,9 @@ div[data-subtype='t'][data-type='NodeList'] {
     /* background-color: var(--b3-protyle-code-background) !important; */
     padding-right:15px;
     padding-bottom: 0px;
-    margin-bottom: 6px;
+    margin-bottom: 0px;
     width: 39px;
-    /* font-size:14px; */
+    font-size:14px;
     /* font-family: var(--b3-font-family-code); */
 }
 
@@ -857,7 +857,7 @@ div[data-subtype='t'][data-type='NodeList'] {
     position: absolute;
     width: 1px;
     height: calc(100% - 10px); 
-    margin: 5px 0px 2px 33px;
+    margin: 0px 0px 2px 33px;
     background-color: #b1c3c491;
 }
 
@@ -1202,6 +1202,14 @@ div[data-subtype='t'][data-type='NodeList'] {
 iframe {
     height: 500px;
 }
+.b3-typography iframe, .protyle-wysiwyg iframe {
+    border: 0px solid var(--b3-border-color);
+    /* width: 765px; */
+    box-sizing: border-box;
+    /* height: 256px; */
+    max-width: 100%;
+    vertical-align: bottom;
+    }
 /* 手机端平板端适配 */
 @media screen and (min-width: 320px) and (max-width: 420px) {
     iframe {
