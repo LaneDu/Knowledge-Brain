@@ -158,13 +158,17 @@
     --b3-protyle-inline-link-hover-color: #fa60a0;
     --b3-protyle-inline-mark-background: #f8e8cb;
     --b3-protyle-inline-mark-color: #202124;
-    /* --b3-protyle-inline-tag-background: #15a3e6; */
-    --b3-protyle-inline-tag-background: #D0E5F8;
+    
+    /* --b3-protyle-inline-tag-background: #D0E5F8;
+    --b3-protyle-inline-tag-text-color: #202124; */
+
+    --b3-protyle-inline-tag-background: #FDDFD2;
     --b3-protyle-inline-tag-text-color: #202124;
-    --b3-protyle-inline-code-color: #b30430;
-    --b3-protyle-inline-code-background: #ffebf1;
-    /* --b3-protyle-inline-code-color: #038296; */
-    /* --b3-protyle-inline-code-background: #e0ecf3a6; */
+
+    /* --b3-protyle-inline-code-color: #b30430; */
+    /* --b3-protyle-inline-code-background: #ffebf1; */
+    --b3-protyle-inline-code-color: #038296;
+    --b3-protyle-inline-code-background: #e0ecf3a6;
     --b3-protyle-inline-blockref-color: #e74c4c;
     /* --b3-protyle-inline-blockref-color: #055ff3; */
     --b3-protyle-inline-blockref-hover-color: #ff398b;
