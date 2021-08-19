@@ -62,9 +62,15 @@
     --b3-tab-background: #e7edf0;
     --b3-tab-background-hover: #dee4e8;
 
-    /* 提示 */
-    --b3-tooltips-color: #88adb8d2;
-
+    /* 工具栏/超链接地址背景提示 */
+    /* --b3-tooltips-color:rgba(128, 128, 128, 0.589); */
+    /* --b3-tooltips-color:rgb(125, 170, 206); */
+    --b3-tooltips-color:rgba(31, 144, 219, 0.603);
+    /* --b3-tooltips-color:rgb(143, 187, 224); */
+    /* --b3-tooltips-color:rgb(144, 179, 207); */
+    /* --b3-tooltips-color:rgba(29, 140, 231, 0.774); */
+    /* --b3-tooltips-color: #88adb8d2; */
+ 
     /* 卡片背景 */
     --b3-card-error-color: rgb(97, 26, 21);
     --b3-card-error-background: rgb(253, 236, 234);
@@ -151,7 +157,7 @@
 
     /* 所见即所得行内元素颜色 */
     --b3-protyle-inline-strong-color: #202124;
-        /* --b3-protyle-inline-strong-color: #ec0e0e; */
+
     --b3-protyle-inline-em-color: #202124;
     --b3-protyle-inline-s-color: #202124;
     --b3-protyle-inline-link-color: #408bba;
@@ -163,8 +169,8 @@
     --b3-protyle-inline-tag-text-color: #202124; */
 
     --b3-protyle-inline-tag-background: #FDDFD2;
-    --b3-protyle-inline-tag-text-color: #202124;
-
+    /* --b3-protyle-inline-tag-text-color: #202124a6; */
+    --b3-protyle-inline-tag-text-color: #202124b9;
     /* --b3-protyle-inline-code-color: #b30430; */
     /* --b3-protyle-inline-code-background: #ffebf1; */
     --b3-protyle-inline-code-color: #038296;
@@ -351,6 +357,7 @@ strong {
     display: inline-block;
     box-sizing: border-box;
     height: 1.5em;
+    /*下划线*/
     /* border-bottom: 1px dashed var(--b3-protyle-inline-blockref-color); */
 }
 /*隐去原先的样式*/
