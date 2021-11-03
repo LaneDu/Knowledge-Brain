@@ -165,18 +165,15 @@
     --b3-protyle-inline-mark-background: #f8e8cb;
     --b3-protyle-inline-mark-color: #202124;
     
-    /* --b3-protyle-inline-tag-background: #D0E5F8;
-    --b3-protyle-inline-tag-text-color: #202124; */
+    --b3-protyle-inline-tag-background: #4492ecdc;
+    /* --b3-protyle-inline-tag-background: #4492ec; */
+    --b3-protyle-inline-tag-text-color: #FFFFFF;
+    --b3-protyle-inline-tag-hover-color: #e74c4cc9;
 
-    --b3-protyle-inline-tag-background: #FDDFD2;
-    /* --b3-protyle-inline-tag-text-color: #202124a6; */
-    --b3-protyle-inline-tag-text-color: #202124b9;
-    /* --b3-protyle-inline-code-color: #b30430; */
-    /* --b3-protyle-inline-code-background: #ffebf1; */
+    /* --b3-protyle-inline-code-color: #c0311f; */
     --b3-protyle-inline-code-color: #038296;
     --b3-protyle-inline-code-background: #e0ecf3a6;
     --b3-protyle-inline-blockref-color: #e74c4c;
-    /* --b3-protyle-inline-blockref-color: #055ff3; */
     --b3-protyle-inline-blockref-hover-color: #ff398b;
     /* 表格 */
     --b3-table-border-color: #dfe0e1;
@@ -211,6 +208,18 @@
     /* box-shadow: rgb(0 0 0 / 30%) 0px 1px 2px; */
     background-color: #d5dde2;
 }
+/*未引用*/
+.b3-list-item.block__icons{
+    /* box-shadow: rgb(0 0 0 / 30%) 0px 1px 2px; */
+    background-color: #eff4f7;
+}
+
+/* 修复面板收缩的留白问题 */
+.block__icons span.fn__space,
+.block__icons div.fn__space{
+    display: inline-block;
+    flex-shrink: 1 !important;
+}
 /* 集市动画 */
 .b3-dialog__container div[data-name='bazaar'] .b3-card:hover {
     transform: translateY(-8px) scale(1.05);
@@ -222,7 +231,17 @@
 .layout__resize::after {
     background-color: #e2e9f1;
 }
+/*背景方格*/
+.b3-typography, .protyle-wysiwyg {
+    background-image: linear-gradient(90deg,rgba(60,10,30,.08) 3%,transparent 0),linear-gradient(1turn,rgba(60,10,30,.08) 3%,transparent 0);
+    background-size: 25px 25px;
+    background-position: 50%;
+    
+}
+.b3-typography, .protyle-wysiwyg.b3-tab-container {
+    background-image: none
 
+}
 /* -------------------------------标题样式-------------------------------------- */
 .protyle-wysiwyg [data-node-id].h1 ,.b3-typography h1{
     text-align: center;
@@ -328,6 +347,9 @@ mark {
 }
 strong {
     color: inherit;
+}
+strong {
+     color: var(--title-color); 
 }
 /* blockquote 引用 */
 .protyle-wysiwyg [data-node-id].bq, .b3-typography blockquote {
@@ -458,27 +480,20 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
 }
 
 /* 标签 */
-.protyle-wysiwyg [data-node-id] span[data-type='tag'] {
-    border-bottom: 0px solid var(--b3-protyle-inline-tag-color);
-    display: inline-flex;
+.protyle-wysiwyg span[data-type='tag'] {
     font-size: 85%;
-    /* font-weight: 600; */
-    text-decoration: none !important;
-    color: var(--b3-protyle-inline-tag-text-color);
+    border-radius: 0.5em;
+    padding: 3px 6px;
+    position: relative;
+    top: -2px;
+    color: var(--b3-protyle-inline-tag-text-color)  !important;
+    border-bottom: none !important;
     background-color: var(--b3-protyle-inline-tag-background);
-    border-radius: 0.325em;
-    padding: 0.08em 0.375em 0.08em !important;
-    margin: 0em 0.25em;
-    transform: translateY(-1.5px);
-    box-sizing: border-box;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    z-index: 20;
-}
-.protyle-wysiwyg [data-node-id] span[data-type='tag']:hover {
-    transform: scale(1.05);
-    background-color: var(--b3-protyle-inline-tag-background);
-}
+  }
+  .protyle-wysiwyg span[data-type='tag']:hover {
+    background-color: var(--b3-protyle-inline-tag-hover-color) !important;
+  }
+ /*行内代码*/
 .protyle-wysiwyg [data-node-id] code,
 .b3-typography code:not(.hljs),
 .protyle-wysiwyg code:not(.hljs) {
@@ -713,7 +728,7 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     position: relative;
 } */
 /*mac图标*/
-.code-block:before {
+.code-block::after{
     content: ' ';
     position: absolute;
     background: #fa625c;
@@ -765,7 +780,7 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     color: rgba(13, 56, 50, 0.719);
     font-weight: 600;
 }
-
+/* 代码块编辑时不闪 */
 .code-block .protyle-icons {
     opacity: 1;
 }
@@ -775,6 +790,17 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
 .code-block:hover .protyle-icons .protyle-action__copy {
     opacity: 1;
 }
+
+.code-block:focus-within .protyle-icons .protyle-action__copy{
+    opacity: 0;
+}
+.code-block .protyle-icons .protyle-action__copy:hover{
+    opacity: 1;
+}
+.code-block:hover .protyle-icons {
+    opacity: 1 !important;
+}
+
 
 
 /* -----------------      外观样式 ----------------- */
@@ -913,28 +939,28 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
 }
 
 .b3-dialog__container .b3-list--background .b3-list-item--focus {
-    background-color: #d8e0e5c7 !important;
+    background-color: #cfe5f391 !important;
     border-radius: 16px 10% 10% 16px;
     /* border-radius: 10%; */
 }
 /* 调整设置的select按钮 */
 .b3-tab-container .b3-select {
-    background-color: #d8e0e5;
+    background-color: #cfe5f305;
 }
 .b3-tab-container .b3-select option {
     background-color: #f3f5f7;
     border-radius: 10%;
 }
 .b3-tab-container .b3-select option:hover {
-    background-color: #dfe6ea !important;
+    background-color: #f1f1f1 !important;
 }
 
 /* 设置/搜索弹窗的链接 */
 .b3-dialog__container a {
     outline: 0;
-    /* text-decoration: none; */
-    text-decoration: underline;
-    color: #588699;
+    text-decoration: none;
+    /* text-decoration: underline; */
+    color: #328eb6;
     font-weight: 500;
 }
 .b3-dialog__container a:hover,
@@ -1198,3 +1224,581 @@ iframe {
     font: 80% Consolas, "Liberation Mono", Menlo, Courier, monospace;
     margin: 0px 1px;
 }
+/* ----------------------------custom: 超链接icon---------------------------------- */
+
+.protyle-wysiwyg [data-node-id] span[data-type='a']:not(:empty)::before,
+.b3-typography a::before{
+    display: inline-block;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 1.1em 1.1em;
+    top: 0.2em;
+    width:1.1em;
+    height: 1.1em;
+    margin-right: 0.2em;
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href^="file://"]:not(:empty)::before,
+.b3-typography a[href^="file://"]::before{
+    content: "";
+    background-image: url('src/folder.svg');
+    opacity: 0.9;
+    background-size: 1.2em 1.2em;
+
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href^="es://"]:not(:empty)::before,
+.b3-typography a[href^="es://"]::before{
+    content: "";
+    background-image: url('src/everything.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href^="zotero://"]:not(:empty)::before,
+.b3-typography a[href^="zotero://"]::before{
+    content: "";
+    background-image: url('src/zotero.ico');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href^="bookxnotepro://"]:not(:empty)::before,
+.b3-typography a[href^="bookxnotepro://"]::before{
+    content: "";
+    background-image: url('src/bookxnote.ico');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href ^="assets/"]:not(:empty)::before,
+.b3-typography a[href *="assets/"]::before{
+    content: "";
+    background-image: url('src/assets.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href ^="assets/"][data-href $=".pdf"]:not(:empty)::before,
+.b3-typography [href *="assets/"][href $=".pdf"]::before{
+    content: "";
+    background-image: url('src/pdf.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href ^="http"]:not(:empty)::before,
+.b3-typography a[href ^="http"]::before{
+    content: "";
+    background-image: url('src/net.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="cnblogs.com"]:not(:empty)::before,
+.b3-typography a[href *="cnblogs.com"]::before{
+    content: "";
+    background-image: url('src/cnblogs.ico');
+
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="bilibili.com"]:not(:empty)::before,
+.b3-typography a[href *="bilibili.com"]::before{
+    content: "";
+    background-image: url('src/bilibili.svg');
+
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="zhihu.com"]:not(:empty)::before,
+.b3-typography a[href *="zhihu.com"]::before{
+
+    content: "";
+    background-image: url('src/zhihu.svg');
+
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="microsoft.com"]:not(:empty)::before,
+.b3-typography a[href *="microsoft.com"]::before{
+
+    content: "";
+    background-image: url('src/microsoft.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href ^="https://ld246.com"]:not(:empty)::before,
+.b3-typography a[href ^="https://ld246.com"]::before{
+
+    content: "";
+    background-image: url('src/ld246.ico');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="google.com"]:not(:empty)::before,
+.b3-typography a[href *="google.com"]::before{
+
+    content: "";
+    background-image: url('src/logo_google_icon.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="chrome.google.com"]:not(:empty)::before,
+.b3-typography a[href *="chrome.google.com"]::before{
+    content: "";
+    background-image: url('src/chrome-web-store.svg');
+    background-size: 1.2em 1.2em;
+
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="taobao.com"]:not(:empty)::before,
+.b3-typography a[href *="taobao.com"]::before{
+
+    content: "";
+    background-image: url('src/taobao.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="jd.com"]:not(:empty)::before,
+.b3-typography a[href *="jd.com"]::before{
+
+    content: "";
+    background-image: url('src/jd.ico');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="xiaohongshu.com"]:not(:empty)::before,
+.b3-typography a[href *="xiaohongshu.com"]::before{
+
+    content: "";
+    background-image: url('src/xiaohongshu.ico');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="pinduoduo.com"]:not(:empty)::before,
+.b3-typography a[href *="pinduoduo.com"]::before{
+
+    content: "";
+    background-image: url('src/pinduoduo.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="alibaba.com"]:not(:empty)::before,
+.b3-typography a[href *="alibaba.com"]::before{
+
+    content: "";
+    background-image: url('src/alibaba.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="tmall.com"]:not(:empty)::before,
+.b3-typography a[href *="tmall.com"]::before{
+
+    content: "";
+    background-image: url('src/tianmao.png');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="amazon.com"]:not(:empty)::before,
+.b3-typography a[href *="amazon.com"]::before{
+
+    content: "";
+    background-image: url('src/amazon.ico');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="iq.com"]:not(:empty)::before,
+.b3-typography a[href *="iq.com"]::before{
+
+    content: "";
+    background-image: url('src/aiqiyi.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="youku.com"]:not(:empty)::before,
+.b3-typography a[href *="youku.com"]::before{
+
+    content: "";
+    background-image: url('src/youku.ico');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="lanzoui.com"]:not(:empty)::before,
+.b3-typography a[href *="lanzoui.com"]::before{
+
+    content: "";
+    background-image: url('src/lanzouyun.ico');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="aliyundrive.com"]:not(:empty)::before,
+.b3-typography a[href *="aliyundrive.com"]::before{
+
+    content: "";
+    background-image: url('src/aliyundrive.png');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="cloud.189.cn"]:not(:empty)::before,
+.b3-typography a[href *="cloud.189.cn"]::before{
+
+    content: "";
+    background-image: url('src/tianyiyun.png');
+    background-size: 1.6em 1em;
+    background-position: left -0.2em top 0.1em;
+    width: 1.1em;
+    height: 1.1em;
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="1drv.ms"]:not(:empty)::before,
+.b3-typography a[href *="1drv.ms"]::before{
+
+    content: "";
+    background-image: url('src/onedrive.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="sharepoint.com"]:not(:empty)::before,
+.b3-typography a[href *="sharepoint.com"]::before{
+
+    content: "";
+    background-image: url('src/sharepoint.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="weiyun.com"]:not(:empty)::before,
+.b3-typography a[href *="weiyun.com"]::before{
+
+    content: "";
+    background-image: url('src/weiyun.svg');
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="baidu.com"]:not(:empty)::before,
+.b3-typography a[href *="baidu.com"]::before{
+
+    content: "";
+    background-image: url('src/baidu.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="pan.baidu.com"]:not(:empty)::before,
+.b3-typography a[href *="pan.baidu.com"]::before{
+
+    content: "";
+    background-image: url('src/baiduwangpan.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="tieba.baidu.com"]:not(:empty)::before,
+.b3-typography a[href *="tieba.baidu.com"]::before{
+
+    content: "";
+    background-image: url('src/logo_baidu_tieba_logo.svg');
+}
+
+
+
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="obsidian.md"]:not(:empty)::before,
+.b3-typography a[href *="obsidian.md"]::before{
+
+    content: "";
+    background-image: url('src/obsidian.ico');
+}
+
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="yuque.com"]:not(:empty)::before,
+.b3-typography a[href *="yuque.com"]::before{
+
+    content: "";
+    background-image: url('src/yuque.svg');
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="blog.csdn.net"]:not(:empty)::before,
+.b3-typography a[href *="blog.csdn.net"]::before{
+
+    content: "";
+    background-image: url('src/csdn.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="jianshu.com"]:not(:empty)::before,
+.b3-typography a[href *="jianshu.com"]::before{
+
+    content: "";
+    background-image: url('src/jianshu.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="gitee.com"]:not(:empty)::before,
+.b3-typography a[href *="gitee.com"]::before{
+
+    content: "";
+    background-image: url('src/gitee.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="wikipedia.org"]:not(:empty)::before,
+.b3-typography a[href *="wikipedia.org"]::before{
+
+    content: "";
+    background-image: url('src/wikipedia.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="weixin.qq.com"]:not(:empty)::before,
+.b3-typography a[href *="weixin.qq.com"]::before{
+
+    content: "";
+    background-image: url('src/wechat.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="y.qq.com"]:not(:empty)::before,
+.b3-typography a[href *="y.qq.com"]::before{
+
+    content: "";
+    background-image: url('src/qqmusic.ico');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="v.qq.com"]:not(:empty)::before,
+.b3-typography a[href *="v.qq.com"]::before{
+
+    content: "";
+    background-image: url('src/qqvideo.ico');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="news.qq.com"]:not(:empty)::before,
+.b3-typography a[href *="news.qq.com"]::before{
+
+    content: "";
+    background-image: url('src/newsqq.ico');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="163.com"]:not(:empty)::before,
+.b3-typography a[href *="163.com"]::before{
+
+    content: "";
+    background-image: url('src/news163.ico');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="music.163.com"]:not(:empty)::before,
+.b3-typography a[href *="music.163.com"]::before{
+
+    content: "";
+    background-image: url('src/netease_music.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="sohu.com"]:not(:empty)::before,
+.b3-typography a[href *="sohu.com"]::before{
+
+    content: "";
+    background-image: url('src/souhu.svg');
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="guancha.cn"]:not(:empty)::before,
+.b3-typography a[href *="guancha.cn"]::before{
+
+    content: "";
+    background-image: url('src/guancha.ico');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="thepaper.cn"]:not(:empty)::before,
+.b3-typography a[href *="thepaper.cn"]::before{
+
+    content: "";
+    background-image: url('src/thepaper.ico');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="toutiao.com"]:not(:empty)::before,
+.b3-typography a[href *="toutiao.com"]::before{
+
+    content: "";
+    background-image: url('src/toutiao.ico');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="facebook.com"]:not(:empty)::before,
+.b3-typography a[href *="facebook.com"]::before{
+
+    content: "";
+    background-image: url('src/facebook.png');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="cctv.com"]:not(:empty)::before,
+.b3-typography a[href *="cctv.com"]::before{
+
+    content: "";
+    background-image: url('src/cctv.ico');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="sspai.com"]:not(:empty)::before,
+.b3-typography a[href *="sspai.com"]::before{
+
+    content: "";
+    background-image: url('src/sspai.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="weibo.com"]:not(:empty)::before,
+.b3-typography a[href *="weibo.com"]::before{
+
+    content: "";
+    background-image: url('src/logo_weibo_icon.svg');
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="github.io"]:not(:empty)::before,
+.b3-typography a[href *="github.io"]::before{
+
+    content: "";
+    background-image: url('src/blog.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="github.com"]:not(:empty)::before,
+.b3-typography a[href *="github.com"]::before{
+
+    content: "";
+    background-image: url('src/github_icon.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="bing.com"]:not(:empty)::before,
+.b3-typography a[href *="bing.com"]::before{
+
+    content: "";
+    background-image: url('src/bing.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="sogou.com"]:not(:empty)::before,
+.b3-typography a[href *="sogou.com"]::before{
+
+    content: "";
+    background-image: url('src/sogou.ico');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="so.com"]:not(:empty)::before,
+.b3-typography a[href *="so.com"]::before{
+
+    content: "";
+    background-image: url('src/so.ico');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="stackoverflow.com"]:not(:empty)::before,
+.b3-typography a[href *="stackoverflow.com"]::before{
+
+    content: "";
+    background-image: url('src/stack-overflow.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="icourse163.org"]:not(:empty)::before,
+.b3-typography a[href *="icourse163.org"]::before{
+
+    content: "";
+    background-image: url('src/mooc.png');
+    background-size: 0.9em;
+    width:0.9em;
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="imooc.com"]:not(:empty)::before,
+.b3-typography a[href *="imooc.com"]::before{
+
+    content: "";
+    background-image: url('src/imooc.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="pornhub.com"]:not(:empty)::before,
+.b3-typography a[href *="pornhub.com"]::before{
+
+    content: "";
+    background-image: url('src/pornhub.ico');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="twitter.com"]:not(:empty)::before,
+.b3-typography a[href *="twitter.com"]::before{
+    content: "";
+    background-image: url('src/logo_twitter.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="youtube.com"]:not(:empty)::before,
+.b3-typography a[href *="youtube.com"]::before{
+    content: "";
+    background-image: url('src/logo_youtube_play_video_icon.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="wolai.com"]:not(:empty)::before,
+.b3-typography a[href *="wolai.com"]::before{
+    content: "";
+    background-image: url('src/logo_wolai_logo.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="notion."]:not(:empty)::before,
+.b3-typography a[href *="notion."]::before{
+    content: "";
+    background-image: url('src/logo_notion-logo.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="douban.com"]:not(:empty)::before,
+.b3-typography a[href *="douban.com"]::before{
+    content: "";
+    background-image: url('src/social-douban.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="ncbi"]:not(:empty)::before,
+.b3-typography a[href *="ncbi"]::before{
+    content: "";
+    background-image: url('src/ncbi.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="pubmed.ncbi.nlm.nih.gov"]:not(:empty)::before,
+.b3-typography a[href *="pubmed.ncbi.nlm.nih.gov"]::before{
+    content: "";
+    background-image: url('src/pubmed.ico');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="cell.com"]:not(:empty)::before,
+.b3-typography a[href *="cell.com"]::before{
+    content: "";
+    background-image: url('src/cell.ico');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="nature.com"]:not(:empty)::before,
+.b3-typography a[href *="nature.com"]::before{
+    content: "";
+    background-image: url('src/nature.png');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="discord."]:not(:empty)::before,
+.b3-typography a[href *="discord."]::before{
+    content: "";
+    background-image: url('src/discord.svg');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="hust.edu.cn"]:not(:empty)::before,
+.b3-typography a[href *="hust.edu.cn"]::before{
+    content: "";
+    background-image: url('src/hust.jpg');
+    background-size: 1.4em 1.3em;
+    width: 1.3em;
+    height: 1.1em;
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="coursera.org"]:not(:empty)::before,
+.b3-typography a[href *="coursera.org"]::before{
+    content: "";
+    background-image: url('src/coursera.svg');
+
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="runoob.com"]:not(:empty)::before,
+.b3-typography a[href *="runoob.com"]::before{
+    content: "";
+    background-image: url('src/runoob.ico');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="liaoxuefeng.com"]:not(:empty)::before,
+.b3-typography a[href *="liaoxuefeng.com"]::before{
+    content: "";
+    background-image: url('src/liaoxuefeng.png');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="juejin.cn"]:not(:empty)::before,
+.b3-typography a[href *="juejin.cn"]::before{
+    content: "";
+    background-image: url('src/juejin.png');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="vue"]:not(:empty)::before,
+.b3-typography a[href *="liaoxuefeng.com"]::before{
+    content: "";
+    background-image: url('src/vue.ico');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="52pojie.cn"]:not(:empty)::before,
+.b3-typography a[href *="52pojie.cn"]::before{
+    content: "";
+    background-image: url('src/52pojie.ico');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="douyin.com"]:not(:empty)::before,
+.b3-typography a[href *="douyin.com"]::before,
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="tiktok.com"]:not(:empty)::before,
+.b3-typography a[href *="tiktok.com"]::before{
+    content: "";
+    background-image: url('src/douyin.png');
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="segmentfault.com"]:not(:empty)::before,
+.b3-typography a[href *="segmentfault.com"]::before{
+    content: "";
+    background-image: url('src/segmentfault.ico');
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="51cto.com"]:not(:empty)::before,
+.b3-typography a[href *="51cto.com"]::before{
+    content: "";
+    background-image: url('src/52cto.ico');
+    
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="cloud.tencent.com"]:not(:empty)::before,
+.b3-typography a[href *="cloud.tencent.com"]::before{
+    content: "";
+    background-image: url('src/tencentcloud.png');
+
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="aliyun.com"]:not(:empty)::before,
+.b3-typography a[href *="aliyun.com"]::before{
+    content: "";
+    background-image: url('src/aliyun.ico');
+
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="oschina.net"]:not(:empty)::before,
+.b3-typography a[href *="oschina.net"]::before{
+    content: "";
+    background-image: url('src/oschina.svg');
+
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="v2ex.com"]:not(:empty)::before,
+.b3-typography a[href *="v2ex.com"]::before{
+    content: "";
+    background-image: url('src/v2ex.ico');
+
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="iconfont.cn"]:not(:empty)::before,
+.b3-typography a[href *="iconfont.cn"]::before{
+    content: "";
+    background-image: url('src/iconfont.svg');
+
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="ruanyifeng.com"]:not(:empty)::before,
+.b3-typography a[href *="ruanyifeng.com"]::before{
+    content: "";
+    background-image: url('src/ruanyifeng.png');
+
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="getquicker.net"]:not(:empty)::before,
+.b3-typography a[href *="getquicker.net"]::before{
+    content: "";
+    background-image: url('src/Quicker.svg');
+
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="visualstudio.com"]:not(:empty)::before,
+.b3-typography a[href *="visualstudio.com"]::before{
+    content: "";
+    background-image: url('src/vsvisual-studio-code.svg');
+
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="mediatrack.cn"]:not(:empty)::before,
+.b3-typography a[href *="mediatrack.cn"]::before{
+    content: "";
+    background-image: url('src/mediatrack.ico');
+
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="xinpianchang.com"]:not(:empty)::before,
+.b3-typography a[href *="xinpianchang.com"]::before{
+    content: "";
+    background-image: url('src/xinpianchang.ico');
+
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="zhangxinxu.com"]:not(:empty)::before,
+.b3-typography a[href *="xinpianchang.com"]::before{
+    content: "";
+    background-image: url('src/zhangxinxu.ico');
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="w3school.com"]:not(:empty)::before,
+.b3-typography a[href *="xinpianchang.com"]::before{
+    content: "";
+    background-image: url('src/w3school.png');
+}
+/* ----------------------------custom: 超链接icon---end------------------------------- */
