@@ -1029,12 +1029,14 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     /* 当前编辑窗口保持主背景色 */
     background-color: var(--b3-theme-background);
 }
+/*tab on focus*/
 .layout-tab-bar {
-    background-color: #f7f6f3;
+    background-color: #fff;
 }
 .layout-tab-bar .item {
     padding: 4px 4px 4px 14px;
     border: 3px;
+    /* font-weight: 200; */
     border-bottom: 2px solid transparent;
     border-right: 3px solid #f7f6f3;
     border-left: 3px solid #f7f6f3;
@@ -1046,8 +1048,8 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
 /* 选中的标签页 */
 .layout-tab-bar .item--focus {
     color: var(--b3-menu-highlight-focus-color);
-    font-weight: 400;
-    font-size: 15px;
+    /* font-weight: 200;
+    font-size: 15px; */
     background-color: var(--b3-tab-custom-background);
     border-right: 3px solid #f7f6f3;
     border-left: 3px solid #f7f6f3;
@@ -1058,7 +1060,7 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
 .layout__wnd--active .layout-tab-bar .item--focus {
     color: var(--b3-menu-highlight-focus-color);
     border-color: #e9f1f5;
-    font-weight: 200;
+    /* font-weight: 200; */
     border-right: 3px solid #f7f6f3;
     border-left: 3px solid #f7f6f3;
     /* 更改多窗口标签页当前页面底框高亮颜色 */
