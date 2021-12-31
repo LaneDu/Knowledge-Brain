@@ -1047,8 +1047,8 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
 /* 选中的标签页 */
 .layout-tab-bar .item--focus {
     color: var(--b3-menu-highlight-focus-color);
-    /* font-weight: 400;
-    font-size: 15px; */
+    font-weight: 400;
+    font-size: 15px;
     background-color: #FAF9DE;
     /* border-right: 1px solid #b7b8b9;
     border-left: 1px solid #b7b8b9; */
@@ -1059,7 +1059,7 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
 .layout__wnd--active .layout-tab-bar .item--focus {
     color: var(--b3-menu-highlight-focus-color);
     border-color: #e9f1f5;
-    /* font-weight: 600; */
+    font-weight: 600;
     /* border-right: 1px solid #b7b8b9;
     border-left: 1px solid #b7b8b9; */
     /* 更改多窗口标签页当前页面底框高亮颜色 */
