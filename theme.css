@@ -154,7 +154,7 @@
     --b3-protyle-search-current-background: #a5d3fe;
 
     /* 代码片段背景 m */
-    /* --b3-protyle-code-background: #e7ecef; */
+    --b3-protyle-code-background: #e7ecef;
 
     /* 所见即所得行内元素颜色 */
     --b3-protyle-inline-strong-color: #202124;
@@ -721,7 +721,7 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     display: block;
     border-radius: 4px;
     /* background: var(--b3-protyle-code-background) ; */
-    /* box-shadow: 0px 3px 10px 3px rgb(6 6 6 / 10%); */
+    box-shadow: 0px 1px 5px 1px rgb(6 6 6 / 5%);
     margin-top: 15px !important;
     padding-top: 32px !important;
 }
@@ -1029,10 +1029,14 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     /* 当前编辑窗口保持主背景色 */
     background-color: var(--b3-theme-background);
 }
+.layout-tab-bar{
+    background-color: #f7f6f3;
+}
 /*tab on focus*/
-.layout-tab-bar {
+.layout-tab-bar:hover {
     background-color: #fff;
 }
+/*未选中的标签页*/
 .layout-tab-bar .item {
     padding: 4px 4px 4px 14px;
     border: 3px;
@@ -1055,18 +1059,6 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     border-left: 3px solid #f7f6f3;
     border-bottom: 2px solid transparent;
     /* filter: drop-shadow(2px 2px 3px #999); */
-}
-/* 多窗口foucs的标签页 */
-.layout__wnd--active .layout-tab-bar .item--focus {
-    color: var(--b3-menu-highlight-focus-color);
-    border-color: #e9f1f5;
-    /* font-weight: 200; */
-    border-right: 3px solid #f7f6f3;
-    border-left: 3px solid #f7f6f3;
-    /* 更改多窗口标签页当前页面底框高亮颜色 */
-    border-bottom: 2px solid transparent;
-    /* border-bottom: 2px solid #34495e7c; */
-    /* background-color: #00aaff; */
 }
 
 /* 未保存样式 */
@@ -1095,12 +1087,12 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     background-color: #eef4f7;
 } */
 
-/* 面包屑 */
+/* 面包屑-标签页下面的路径背景色 */
 .protyle-breadcrumb {
     background-color: var(--b3-tab-custom-background);
     z-index: 2;
 }
-
+/*标签页结束*/
 /* .b3-dialog__container .b3-dialog__close {
     color: #505964;
     font-size: 50%;
