@@ -3,12 +3,19 @@
     font-style: normal;
     src: url('fonts/seguiemj.ttf');
 }
-@font-face {
+ @font-face {
     font-family: 'FiraCode';
     font-style: normal;
     src: url('fonts/FiraCode-Regular.ttf');
-}
-
+} 
+@font-face{
+    font-family:"HarmonyOS Sans SC 01";
+    font-style: normal;
+    src:url("fonts/HarmonyOS_Sans_SC_Regular.ttf")}
+@font-face{
+    font-family:"JetBrains Mono 01";
+    font-style: normal;
+    src:url("fonts/JetBrainsMono-Regular.ttf")}
 :root {
     /* 主色 */
     /* 高亮 */
@@ -41,13 +48,17 @@
     --b3-theme-on-error: #fff;
 
     /* 字体 */
-    --b3-font-family: 'SourceHan', 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans', 'Hiragino Sans GB',
+    /* --b3-font-family: 'SourceHan', 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans', 'Hiragino Sans GB',
         'Microsoft Yahei', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji',
         'Win10 Emoji', 'Segoe UI Symbol', 'Android Emoji', 'EmojiSymbols';
     --b3-font-family-code: 'FiraCode', mononoki, Consolas, 'Liberation Mono', Menlo, Courier,
         monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', 'Segoe UI Symbol',
-        'Android Emoji', 'EmojiSymbols';
+        'Android Emoji', 'EmojiSymbols'; 
+    --b3-font-family-graph: mononoki;*/
+    --b3-font-family: "HarmonyOS Sans SC 01", "JetBrains Mono 01", "Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Hiragino Sans GB", "Microsoft Yahei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
+    --b3-font-family-code: "JetBrains Mono 01", "HarmonyOS Sans SC 01", mononoki, Consolas, "Liberation Mono", Menlo, Courier, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
     --b3-font-family-graph: mononoki;
+    --b3-font-family-emoji: "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "Apple Color Emoji", "Twemoji Mozilla", "Noto Color Emoji", "Android Emoji";
     /* 线条 */
     /* --b3-border-color: #dfe0e1; */
     --b3-border-color: rgba(0, 0, 0, .1);
@@ -721,7 +732,8 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     display: block;
     border-radius: 4px;
     /* background: var(--b3-protyle-code-background) ; */
-    box-shadow: 0px 1px 5px 1px rgb(6 6 6 / 5%);
+    /* box-shadow: 0px 1px 5px 1px rgb(6 6 6 / 5%); */
+       /* box-shadow: 0px 3px 10px 3px rgb(6 6 6 / 10%); */
     margin-top: 15px !important;
     padding-top: 32px !important;
 }
