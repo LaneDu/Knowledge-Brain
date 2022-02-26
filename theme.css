@@ -48,17 +48,11 @@
     --b3-theme-on-error: #fff;
 
     /* 字体 */
-    /* --b3-font-family: 'SourceHan', 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans', 'Hiragino Sans GB',
-        'Microsoft Yahei', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji',
-        'Win10 Emoji', 'Segoe UI Symbol', 'Android Emoji', 'EmojiSymbols';
-    --b3-font-family-code: 'FiraCode', mononoki, Consolas, 'Liberation Mono', Menlo, Courier,
-        monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', 'Segoe UI Symbol',
-        'Android Emoji', 'EmojiSymbols'; 
-    --b3-font-family-graph: mononoki;*/
     --b3-font-family: "HarmonyOS Sans SC 01", "JetBrains Mono 01", "Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Hiragino Sans GB", "Microsoft Yahei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
     --b3-font-family-code: "JetBrains Mono 01", "HarmonyOS Sans SC 01", mononoki, Consolas, "Liberation Mono", Menlo, Courier, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
     --b3-font-family-graph: mononoki;
     --b3-font-family-emoji: "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "Apple Color Emoji", "Twemoji Mozilla", "Noto Color Emoji", "Android Emoji";
+    --b3-font-family-math: KaTeX_Math;
     /* 线条 */
     /* --b3-border-color: #dfe0e1; */
     --b3-border-color: rgba(0, 0, 0, .1);
@@ -120,6 +114,16 @@
     --b3-font-background11: rgba(234, 202, 220, 0.5);
     --b3-font-background12: rgba(253, 198, 200, 0.5);
     --b3-font-background13: var(--b3-theme-on-background);
+    /* PDF */
+    --b3-pdf-sidebar-width: 200px;
+    --b3-pdf-offset: 0;
+    --b3-pdf-background3: #f6fa00;
+    --b3-pdf-background2: #54f090;
+    --b3-pdf-background1: #5cbef3;
+    --b3-pdf-background4: #db9ef3;
+    --b3-pdf-background5:  #e99999;
+    --b3-pdf-background6:  #d4d4d4;
+    --b3-pdf-background7: #a0adf8;
 
     /* 动画效果 */
     --b3-transition: all 0.15s cubic-bezier(0, 0, 0.2, 1) 0ms;
@@ -188,10 +192,10 @@
     --b3-protyle-inline-blockref-color: #e74c4c;
     --b3-protyle-inline-blockref-hover-color: #ff398b;
     /* 表格 */
-    --b3-table-border-color: #dfe0e1;
-    --b3-table-th-color: #e9ecee;
-    --b3-table-trn-color: #f8f9fa;
-    --b3-table-tr2n-color: #f0f4f5;
+    --b3-table-border-color: #e7e6e6;
+    --b3-table-th-color: #ffffff;
+    --b3-table-trn-color: #ffffff;
+    --b3-table-tr2n-color: #ffffff;
     /* 高亮 */
     --b3-menu-highlight-color: #068eb8;
     --b3-menu-highlight-focus-color: #34495e;
@@ -254,6 +258,7 @@
     background-image: none
 
 }
+
 /* -------------------------------标题样式-------------------------------------- */
 .protyle-wysiwyg [data-node-id].h1 ,.b3-typography h1{
     text-align: center;
@@ -296,59 +301,68 @@
 }
 
 /* -------------------------------表格------------------------------------- */
+/* -------------------------------表格start------------------------------------- */
+/* 设置表格不折叠，表格宽度100%，代码来自于rem craft主题 */
+ .b3-typography table,
+.b3-typography .protyle-wysiwyg table,
+.protyle-wysiwyg .b3-typography table,
+.b3-typography .table table,
+.protyle-wysiwyg table,
+.protyle-wysiwyg .table table{
+    display:table;
+    width:100%;
+} 
+/* table{
+    border-collapse: collapse !important;
+    display: table;
+    width: 100%;
+} */
 
-/* 表格 */
-.protyle-wysiwyg   table thead tr {
-    background-color: var(--b3-table-th-color) !important;
+/* 设置表头区域顶部边框，使表格更明显 */
+/* table thead{
+    border-top: 3px solid #cf5659 !important;
+} */
+
+/*设置表格表头样式，颜色，背景，加粗，居中对齐*/
+table th {
+    font-weight: bold; 
+    text-align: center !important; 
+    /* color: #cf5659 !important;  */
+    background-color: #ffebeb;
+ 
 }
-.protyle-wysiwyg   table tbody tr:nth-child(2n + 1) {
-    background-color: var(--b3-table-trn-color) !important;
+
+/* 设置表格内部边框 */
+th,td {
+    min-width: 1em;
+    border:1.0px solid #0000002a !important; 
+    border-collapse: collapse;
+    color: inherit;
 }
-.protyle-wysiwyg   table tbody tr:nth-child(2n) {
-    background-color: var(--b3-table-tr2n-color) !important;
+
+/* 表格奇偶行不同颜色 */
+tbody tr:nth-child(2n + 1) {
+    background-color: white;
 }
-.protyle-wysiwyg   table tr th {
-    border-left: 1px solid var(--b3-table-border-color);
-    border-right: 1px solid var(--b3-table-border-color);
+tbody tr:nth-child(2n) {
+    background-color: white;
 }
-.protyle-wysiwyg table tr td {
-    border-left: 1px solid var(--b3-table-border-color);
-    border-right: 1px solid var(--b3-table-border-color);
+
+/* 设置表格表头/首行不换行 */
+table th {
+    white-space: nowrap;
 }
-.protyle-wysiwyg  table tr th:first-child,
-.protyle-wysiwyg table tr td:first-child {
-    border-left-width: 0px;
-}
-.protyle-wysiwyg  table tr th:last-child,
-.protyle-wysiwyg  table tr td:last-child {
-    border-right-width: 0px;
-}
-/*  */
-.b3-typography   table thead tr {
-    background-color: var(--b3-table-th-color) !important;
-}
-.b3-typography   table tbody tr:nth-child(2n + 1) {
-    background-color: var(--b3-table-trn-color) !important;
-}
-.b3-typography    table tbody tr:nth-child(2n) {
-    background-color: var(--b3-table-tr2n-color) !important;
-}
-.b3-typography   table tr th {
-    border-left: 1px solid var(--b3-table-border-color);
-    border-right: 1px solid var(--b3-table-border-color);
-}
-.b3-typography  table tr td {
-    border-left: 1px solid var(--b3-table-border-color);
-    border-right: 1px solid var(--b3-table-border-color);
-}
-.b3-typography   table tr th:first-child,
-.b3-typography  table tr td:first-child {
-    border-left-width: 0px;
-}
-.b3-typography   table tr th:last-child,
-.b3-typography   table tr td:last-child {
-    border-right-width: 0px;
-}
+/* 设置表格首列不换行 */
+table td:nth-child(1) {
+    white-space: nowrap; 
+} 
+
+/* 设置表格行悬浮高亮 */
+/* table tr:hover {
+    background: #ffebeb !important; 
+    color: #cf5659 !important;
+} */
+/* -------------------------------表格end------------------------------------- */
 
 /* -------------------------------行内块字体样式-------------------------------------- */
 
@@ -758,17 +772,15 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
 
 /*  代码块行数*/
 .protyle-linenumber__rows {
-    margin-top: 31px !important;
+    margin-top: 32px !important;
     /* background-color: var(--b3-protyle-code-background) !important; */
-    padding-right:15px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    width: 39px;
     font-size:14px;
     /* font-family: var(--b3-font-family-code); */
+    
 }
 
-.protyle-linenumber__rows::before{
+/*代码行竖线**/
+/* .protyle-linenumber__rows::before{
     content: '';
     display: block;
     position: absolute;
@@ -776,7 +788,7 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     height: calc(100% - 10px); 
     margin: 0px 0px 2px 33px;
     background-color: #b1c3c491;
-}
+} */
 
 /* 代码语言显示 */
 
@@ -823,11 +835,17 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
 .b3-list--background .b3-list-item:hover {
     color: var(--b3-menu-highlight-color);
     background-color: var(--b3-list-hover);
+    
 }
 .b3-list--background .b3-list-item:hover .b3-list-item__text,
 .b3-list--background .b3-list-item:hover .b3-list-item__graphic {
     color: var(--b3-menu-highlight-color);
     /* background-color: var(--b3-list-hover); */
+
+    
+}
+.b3-list-item .b3-list-item--hide-action{
+        background-color:#fff !important;
 }
 
 .b3-list--background .b3-list-item--focus {
@@ -1028,6 +1046,7 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     /* 多窗口非活动窗口变暗 */
     background-color: #FFF;
     transition: background-color 0.5s linear;
+    color: rgba(31,35,41,.8)
 }
 
 .block__popover--open .fn__flex-column .protyle-wysiwyg {
@@ -1812,3 +1831,116 @@ iframe {
     background-image: url('src/w3school.png');
 }
 /* ----------------------------custom: 超链接icon---end------------------------------- */
+/* ---------------------------- PDF start------------------------------------------- */
+
+/* pdf搜索高亮 */
+.textLayer .highlight.selected {
+    margin: 0px;
+    padding: 0px;
+    background-color: #eaee05;
+    border-radius: 2px;
+}
+.textLayer .highlight {
+    margin: 0px;
+    padding: 0px,0px,0px,0px;
+    background-color: #ffd8fe;
+    border-radius: 2px;
+}
+/* pdf双链 */
+.protyle-wysiwyg [data-node-id] span[data-type='file-annotation-ref'] {
+    color: #e27b05;
+    padding-bottom: 0em;
+    box-sizing: border-box;
+    height: 1.5em;
+    opacity: 1;
+    border-bottom: 1px dashed #24b0e7b2;
+
+}
+
+/* 悬浮工具栏样式 */
+.pdf__util.b3-menu.pdf__util--hide {
+    padding: 2px 4px 5px;
+    border: 2px solid rgba(0, 0, 0, 0.63);
+
+}
+.pdf__util.b3-menu .fn__flex {
+    padding: 6px 4px 0px !important;
+
+}
+
+/* 自定义颜色选框调整宽高 */
+
+.b3-color__square{
+    height: 20px;
+    width: 20px;
+    border-radius: 2px;
+
+}
+.b3-color__square[data-type="color"]{
+    background: no-repeat round url("src/a1.svg") ;
+    box-shadow: 0 0 0 1.5px var(--b3-border-color) inset;
+}
+
+.b3-color__square[data-type="backgroundColor"]{
+    background: no-repeat round url("src/a2.svg");
+    box-shadow: 0 0 0 1.5px var(--b3-border-color) inset;
+}
+
+.b3-color__square:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 1.5px 1px var(--b3-theme-on-background) inset;
+}
+.pdf__util.b3-menu {
+    /* 阴影减小 */
+    box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),
+        0px 9px 46px 8px rgba(0, 0, 0, 0.12);;
+}
+
+.pdf__util.b3-menu .b3-color__square{
+    height: 25px;
+    width: 25px;
+    border-radius: 10px;    
+    box-shadow: 0 0 0 2px black inset;
+}
+/* pdf光标选中文本样式 */
+.pdf__outer ::selection{ 
+    /* 颜色不能加透明度，不然有叠加层  */
+    background-color:#9dd6f1dc;
+}
+/* pdf矩形选框增加border宽度 */
+.pdf__rect.popover__block>div[style*="border: 2px solid var(--b3-pdf-"]{
+    border-width: 3px!important;
+}
+.pdf__resize {
+    border-width: 3px!important;
+}
+/* 区分侧栏聚焦和未聚焦状态 */
+.block__icons--active {
+    background-color: #c1dcecf8 !important;
+}
+
+/*文件树**/
+/* 修复1.4.2 文件树列表focus高亮问题 */
+.b3-list--files .b3-list-item--focus:not(.dragover):not(.dragover__top):not(.dragover__bottom) {
+    background-color: var(--b3-menu-highlight-background) !important;
+}
+
+/* 文件树拖拽增强 */
+.file-tree .dragover__bottom {
+    box-shadow: 0 3px 0 rgba(97, 178, 236, 0.726),inset 0px -3px 0 rgba(97, 178, 236, 0.726);
+}
+.file-tree .dragover__top {
+    box-shadow: 0 -3px 0 rgba(97, 178, 236, 0.726),inset 0px 3px 0 rgba(97, 178, 236, 0.726);
+}
+
+/*笔记本更宽的间隔**/
+
+.b3-list .b3-list-item:not(.b3-list-item--big), .b3-list--background .b3-list-item:not(.b3-list-item--big) {
+    padding: calc((32.8px - 22px)/2) 6px !important;
+    margin: 4px 0;
+}
+.b3-list .b3-list-item, .b3-list--background .b3-list-item {
+    height: auto;
+    border-radius: 4px;
+    line-height: 22px;
+}

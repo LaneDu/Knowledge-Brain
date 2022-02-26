@@ -1,7 +1,5 @@
 ##  主题名称 Knowledge Brain
 
-> 主题是在Tsundoku light 6月份基础上进行修改，样式已经完全不一样了
->
 > 主题的名字Knowledge Brain 寓意知识大脑
 >
 > 若感觉主题不错，订阅思源的时候可以支持一下，订阅推荐码：X0sndna
@@ -9,17 +7,40 @@
 > 若有什么问题可以在思源社区或者GitHub提issue。
 >
 > 若对于模板有需求的可以看一下Me，里面有一些好东西，随机234张4K高清精美图片的模板、Live2d动态二次元角色和音乐播放器模板及**各种类型的目录显示**等
+>
+> 我本后端，奈何前端，目前集市已百花齐放
+>
+> 感谢集市上的主题如Tundoku、Dark+、RemCraft 可以让我借鉴（Copy）一些样式
+
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/release/lanedu/Knowledge-Brain?include_prereleases)
+![GitHub](https://img.shields.io/github/license/lanedu/Knowledge-Brain)
+![GitHub last commit](https://img.shields.io/github/last-commit/lanedu/Knowledge-Brain)
+![GitHub repo size](https://img.shields.io/github/repo-size/lanedu/Knowledge-Brain)
+![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hy/lanedu/Knowledge-Brain?label=hits)
+
+### 2月26日大更新
+
+1. 更新表格的样式更贴近传统Excel
+2. 修复了代码行行号宽度换行问题，去掉了代码行竖线
+3. 增强了在自定义排序情况下[拖拽文档的显示效果](https://github.com/LaneDu/Knowledge-Brain/issues/2)，更加明显。
+3. 修改了PDF的搜索显示颜色，包括聚焦的和非聚焦的
+3. 修改了PDF矩形框选和选中文字的颜色选择和样式（样式摘抄自Tsundoku Light）
+3. 修改了文档树的笔记本和笔记间隔
+3. 推荐代码块语法高亮主题为vs
 
 ### 2月19更新视频时间戳（copy自Dark+）
 
 1. 去掉Knowledge Brain Y 主题，实际仍然在该文件下的theemey.css文件
-2. 看到社区的那个[视频时间戳](https://ld246.com/article/1645210285263)不错，就拷贝下添加进来了，不过修改了下快捷键
+
+2. 看到社区的那个[视频时间戳](https://ld246.com/article/1645210285263)不错，就从[Dark Plus](https://github.com/Zuoqiu-Yingyi/siyuan-theme-dark-plus)拷贝下添加进来了，不过修改了下快捷键
+
 3. 可以使用原功能的快捷键只需要修改config.js中的那两个0改成1，则第三步和第四步就改为command + 鼠标中键了。
    1. command(control) + 鼠标左键点击**音视频块两侧空白处**，会把时间戳添加到剪切板上
    2. command + v 粘贴时间戳到笔记中
    3. command + 鼠标左键点击刚才粘贴到时间戳，此时会把视频的属性time改为时间戳时间
    4. command + 鼠标左键点击音**视频块两侧空白处**，视频会跳转到时间戳时间处。
-
+   
+   [简单演示](https://b3logfile.com/file/2022/02/2022.02.19.13.50-5d195148.gif)
 ### 1月23更新
 
 1. 更新字体更加护眼舒适、略微加深了
