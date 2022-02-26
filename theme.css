@@ -1914,10 +1914,7 @@ iframe {
 .pdf__resize {
     border-width: 3px!important;
 }
-/* 区分侧栏聚焦和未聚焦状态 */
-.block__icons--active {
-    background-color: #c1dcecf8 !important;
-}
+
 
 /*文件树**/
 /* 修复1.4.2 文件树列表focus高亮问题 */
