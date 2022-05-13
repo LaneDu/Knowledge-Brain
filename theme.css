@@ -310,7 +310,7 @@
 .protyle-wysiwyg table,
 .protyle-wysiwyg .table table{
     display:table;
-    width:100%;
+    /* width:100%; */
 } 
 /* table{
     border-collapse: collapse !important;
@@ -772,9 +772,11 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
 
 /*  代码块行数*/
 .protyle-linenumber__rows {
-    margin-top: 32px !important;
+    margin-top: 14px !important;
     /* background-color: var(--b3-protyle-code-background) !important; */
     font-size:14px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
     /* font-family: var(--b3-font-family-code); */
     
 }
@@ -792,11 +794,23 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
 
 /* 代码语言显示 */
 
-.code-block .protyle-icons {
+/* .code-block .protyle-icons {
 
     background-color: transparent;
     border-radius: 4px;
+    
+} */
+/* 代码块的语言代码 */
+.b3-typography .code-block .protyle-action .protyle-action__language,
+.protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
+    margin-top: 0px;
+    position: absolute;
+    right: 4em;
+    border-radius: 4px;
+    opacity: 1 !important;
+ 
 }
+
 .code-block .protyle-icons>span:hover {
     background-color: #cad8dd;
 }
@@ -826,7 +840,30 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     opacity: 1 !important;
 }
 
+/*代码复制的样式*/
+/* .b3-typography .code-block .protyle-action .protyle-action__language::after,
+.protyle-wysiwyg .code-block .protyle-action .protyle-action__language::after {
+    content: "›";
+    font-family: var(--b3-font-family-code);
+    color: #80808080;
+    opacity: 1;
+} */
 
+/* 复制和设置按钮样式 */
+/* .b3-typography .code-block .protyle-action .protyle-icon,
+.b3-typography .code-block .protyle-action .protyle-action__language,
+.protyle-wysiwyg .code-block .protyle-action .protyle-icon,
+.protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
+    opacity: 1 !important;
+    background-color: transparent !important;
+} */
+
+/* .b3-typography .code-block .protyle-action .protyle-icon svg,
+.b3-typography .code-block .protyle-action .protyle-action__language svg,
+.protyle-wysiwyg .code-block .protyle-action .protyle-icon svg,
+.protyle-wysiwyg .code-block .protyle-action .protyle-action__language svg {
+    color: gray;
+} */
 
 /* -----------------      外观样式 ----------------- */
 
@@ -1941,3 +1978,100 @@ iframe {
     border-radius: 4px;
     line-height: 22px;
 }
+
+/* ----------optimize-custom-emoji ----Start--------*/
+/* 调整编辑器内的自定义emoji大小 */
+.b3-typography img.emoji, .protyle-wysiwyg img.emoji {
+    cursor: auto;
+    max-width: 2.5em;
+    box-shadow: none !important;
+    vertical-align: top;
+}
+
+/* 取消官方悬浮文档图标的修改提示 */
+.b3-list--files .b3-list-item__icon:hover {
+    background-color: transparent;
+    border-radius: 0px;
+}
+.b3-list--files .b3-list-item__icon:hover::after,
+.b3-list--files .b3-list-item__icon:hover::before{
+    opacity: 0;
+}
+
+/* 文档图标标题上方大小调整win10 emoji */
+.protyle-background__icon {
+    height: 80px;
+    width: 80px;
+    transition: var(--b3-transition);
+    position: absolute;
+    /* bottom: -40px; */
+    cursor: pointer;
+    /* font-size: 70px;
+    line-height: 70px; */
+    text-align: center;
+    font-family: var(--b3-font-family-emoji);
+    z-index: 1;
+}
+/* 文档图标文件树大小调整 */
+.file-tree .b3-list-item__icon svg, .file-tree .b3-list-item__icon img {
+    /* margin-top: 6px; */
+    height: 18px;
+    width: 18px;
+    color: var(--b3-theme-on-surface);
+}
+
+
+.file-tree .b3-list-item__icon {
+    text-align: center;
+    font-size: 15px;
+    margin-right: 1px;
+    line-height: 28px;
+    height: 28px;
+    transition: var(--b3-transition);
+    padding: 0 2px;
+    width: 20px;
+    margin-top: -3px;
+}
+
+/* 改变新建按钮图标 */
+.file-tree [data-type="new"] svg {
+    opacity: 0;
+}
+
+
+.file-tree [data-type="new"] {
+    /* background-color: #fff; */
+    background-image: url(src/add.svg);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: left 1px top 6px;
+}
+.file-tree [data-type="new"]:hover{
+    background-color: #d3e2e671;
+}
+/* 调整内容中标题左侧文档图标大小 */
+.protyle-title.protyle-wysiwyg--attr span svg {
+    height: 20px;
+    width: 20px;
+    float: left;
+}
+
+
+.emojis__item img, .emojis__item svg {
+    height: 30px;
+    width: 30px;
+}
+.emojis__item {
+    font-size: 20px;
+    line-height: 30px;
+    font-family: var(--b3-font-family-emoji);
+    text-align: center;
+    height: 33px;
+    width: 33px;
+    padding: 2px 4px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+
+/* ----------optimize-custom-emoji ---END---------*/

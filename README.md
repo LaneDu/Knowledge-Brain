@@ -18,6 +18,16 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/lanedu/Knowledge-Brain)
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hy/lanedu/Knowledge-Brain?label=hits)
 
+### 5月13日更新
+
+从思源2.+版本好像出现了代码行号语言位置显示问题，一直没更新思源加上比较忙也没怎么关注
+
+1. 表格改回不默认宽度占满
+2. 代码行号错位
+3. 代码语言位置错位
+
+不是专业前端，其他主题有什么好的特性可以提出建议，好的话我可以copy到这个主题（根据协议）
+
 ### 2月26日大更新
 
 1. 更新表格的样式更贴近传统Excel
