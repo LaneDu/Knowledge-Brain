@@ -1,0 +1,378 @@
+/* ------------------ 自定义属性 ----------------------- */
+.protyle-wysiwyg [data-node-id][custom-function="挖空"],
+.protyle-wysiwyg [data-node-id][custom-f="挖空"],
+.protyle-wysiwyg [data-node-id][custom-function="hide"],
+.protyle-wysiwyg [data-node-id][custom-f="hide"]{
+    border: 2px dashed  rgba(92, 135, 138, 0.322);
+    background-color: rgba(92, 135, 138, 0.322);
+    background-image: -webkit-gradient(linear,
+    0 0, 100% 100%,
+    color-stop(.25, rgba(255, 255, 255, .2)),
+    color-stop(.25, transparent),
+    color-stop(.5, transparent),
+    color-stop(.5, rgba(255, 255, 255, .2)),
+    color-stop(.75, rgba(255, 255, 255, .2)),
+    color-stop(.75, transparent),
+    to(transparent));
+    background-size: 10px 10px;
+    border-radius: 0.5em;
+    transform: perspective(1000px);
+    transform-style: preserve-3d;
+    transform: rotateX(180deg); 
+}
+
+.protyle-wysiwyg [data-node-id][custom-function="挖空"] * ,
+.protyle-wysiwyg [data-node-id][custom-f="挖空"] *,
+.protyle-wysiwyg [data-node-id][custom-function="hide"] *,
+.protyle-wysiwyg [data-node-id][custom-f="hide"] *{
+    opacity: 0;
+}
+
+
+.protyle-wysiwyg [data-node-id][custom-function="挖空"]:hover,
+.protyle-wysiwyg [data-node-id][custom-f="挖空"]:hover,
+.protyle-wysiwyg [data-node-id][custom-function="hide"]:hover,
+.protyle-wysiwyg [data-node-id][custom-f="hide"]:hover{
+
+    animation: rotateHide 0.7s ease forwards;
+}
+
+.protyle-wysiwyg [data-node-id][custom-function="挖空"]:hover *,
+.protyle-wysiwyg [data-node-id][custom-f="挖空"]:hover *,
+.protyle-wysiwyg [data-node-id][custom-function="hide"]:hover *,
+.protyle-wysiwyg [data-node-id][custom-f="hide"]:hover * {
+        opacity: 1;
+    transition: opacity 0.7s ease;
+}
+.protyle-wysiwyg .protyle-wysiwyg__embed [data-node-id][custom-function="挖空"]:hover,
+.protyle-wysiwyg .protyle-wysiwyg__embed [data-node-id][custom-f="挖空"]:hover,
+.protyle-wysiwyg .protyle-wysiwyg__embed [data-node-id][custom-function="hide"]:hover,
+.protyle-wysiwyg .protyle-wysiwyg__embed [data-node-id][custom-f="hide"]:hover{
+        animation: rotateHide 0.7s ease forwards;
+}
+
+.protyle-wysiwyg .protyle-wysiwyg__embed [data-node-id][custom-function="挖空"]:hover *,
+.protyle-wysiwyg .protyle-wysiwyg__embed [data-node-id][custom-f="挖空"]:hover *,
+.protyle-wysiwyg .protyle-wysiwyg__embed [data-node-id][custom-function="hide"]:hover *,
+.protyle-wysiwyg .protyle-wysiwyg__embed [data-node-id][custom-f="hide"]:hover * {
+    opacity: 1;
+    transition: opacity 0.7s ease;
+}
+@keyframes rotateHide {
+    0% {
+    }
+    100% {
+        transform: rotateX(0deg); 
+        color: var(--b3-theme-on-background);
+        border-color: var(--b3-theme-on-background);
+        background-color: transparent;
+        background-image: none;
+    }
+}
+.protyle-wysiwyg [data-node-id][custom-function ="黄"],
+.protyle-wysiwyg [data-node-id][custom-f ="黄"],
+.protyle-wysiwyg [data-node-id][custom-function ="yellow"],
+.protyle-wysiwyg [data-node-id][custom-f ="yellow"] {
+    background: #ffeb3b;
+    color: black;
+}
+.protyle-wysiwyg [data-node-id][custom-function ="红"],
+.protyle-wysiwyg [data-node-id][custom-f ="红"],
+.protyle-wysiwyg [data-node-id][custom-function ="red"],
+.protyle-wysiwyg [data-node-id][custom-f ="red"]{
+    background: #ff5722;
+    color: white;
+
+}
+.protyle-wysiwyg [data-node-id][custom-function ="蓝"],
+.protyle-wysiwyg [data-node-id][custom-f ="蓝"],
+.protyle-wysiwyg [data-node-id][custom-function ="blue"],
+.protyle-wysiwyg [data-node-id][custom-f ="blue"]{
+    background: #2196f3;
+    color: white;
+}
+.protyle-wysiwyg [data-node-id][custom-function="ing"] div[contenteditable="true"]:after,
+.protyle-wysiwyg [data-node-id][custom-f="ing"] div[contenteditable="true"]:after {
+    content: "ING";
+    display: inline-block;
+    padding: 0 7px;
+    margin: auto 2px;
+    background: #b0c7d1;
+    border-radius: 15px;
+    color: black;
+    transform:scale(0.7);
+}
+
+.protyle-wysiwyg [data-node-id][custom-function="10"]  div[contenteditable="true"]:after,
+.protyle-wysiwyg [data-node-id][custom-f="10"]  div[contenteditable="true"]:after {
+    content: "10%";
+    padding: 0px 4px;
+    display: inline-block;
+    margin: auto 2px;
+    background: #ff3b3b;
+    border-radius: 15px;
+    color: white;
+    transform:scale(0.7);
+}
+.protyle-wysiwyg [data-node-id][custom-function="20"]  div[contenteditable="true"]:after,
+rotyle-wysiwyg [data-node-id][custom-f="20"]  div[contenteditable="true"]:after {
+    content: "20%";
+    padding: 0px 4px;
+    display: inline-block;
+    margin: auto 2px;
+    background: #f57373;
+    border-radius: 15px;
+    color: white;
+    transform:scale(0.7);
+}
+.protyle-wysiwyg [data-node-id][custom-function="30"]  div[contenteditable="true"]:after,
+.protyle-wysiwyg [data-node-id][custom-f="30"]  div[contenteditable="true"]:after {
+    content: "30%";
+    padding: 0px 4px;
+    display: inline-block;
+    margin: auto 2px;
+    background: #ad7123;
+    border-radius: 15px;
+    color: white;
+    transform:scale(0.7);
+}
+.protyle-wysiwyg [data-node-id][custom-function="40"]  div[contenteditable="true"]:after,
+.protyle-wysiwyg [data-node-id][custom-f="40"]  div[contenteditable="true"]:after {
+    content: "40%";
+    padding: 0px 4px;
+    display: inline-block;
+    margin: auto 2px;
+    background: #85b924;
+    border-radius: 15px;
+    color: white;
+    transform:scale(0.7);
+}
+.protyle-wysiwyg [data-node-id][custom-function="50"]  div[contenteditable="true"]:after,
+.protyle-wysiwyg [data-node-id][custom-f="50"]  div[contenteditable="true"]:after {
+    content: "50%";
+    padding: 0px 4px;
+    display: inline-block;
+    margin: auto 2px;
+    background: #31c52c;
+    border-radius: 15px;
+    color: white;
+    transform:scale(0.7);
+}
+.protyle-wysiwyg [data-node-id][custom-function="60"]  div[contenteditable="true"]:after,
+.protyle-wysiwyg [data-node-id][custom-f="60"]  div[contenteditable="true"]:after {
+    content: "60%";
+    padding: 0px 4px;
+    display: inline-block;
+    margin: auto 2px;
+    background: #27b394;
+    border-radius: 15px;
+    color: white;
+    transform:scale(0.7);
+}
+.protyle-wysiwyg [data-node-id][custom-function="70"]  div[contenteditable="true"]:after,
+.protyle-wysiwyg [data-node-id][custom-f="70"]  div[contenteditable="true"]:after {
+    content: "70%";
+    padding: 0px 4px;
+    display: inline-block;
+    margin: auto 2px;
+    background: #3bc1ff;
+    border-radius: 15px;
+    color: white;
+    transform:scale(0.7);
+}
+.protyle-wysiwyg [data-node-id][custom-function="80"]  div[contenteditable="true"]:after,
+.protyle-wysiwyg [data-node-id][custom-f="80"]  div[contenteditable="true"]:after {
+    content: "80%";
+    padding: 0px 4px;
+    display: inline-block;
+    margin: auto 2px;
+    background: #583bff;
+    border-radius: 15px;
+    color: white;
+    transform:scale(0.7);
+}
+.protyle-wysiwyg [data-node-id][custom-function="90"]  div[contenteditable="true"]:after,
+.protyle-wysiwyg [data-node-id][custom-f="90"]  div[contenteditable="true"]:after {
+    content: "90%";
+    padding: 0px 4px;
+    display: inline-block;
+    margin: auto 2px;
+    background: #e83bff;
+    border-radius: 15px;
+    color: white;
+    transform:scale(0.7);
+}
+
+.protyle-wysiwyg [data-node-id][custom-function="done"] div[contenteditable="true"]:after, 
+.protyle-wysiwyg [data-node-id][custom-function="100"]  div[contenteditable="true"]:after,
+.protyle-wysiwyg [data-node-id][custom-f="done"] div[contenteditable="true"]:after, 
+.protyle-wysiwyg [data-node-id][custom-f="100"]  div[contenteditable="true"]:after{
+
+    content: "✔";
+    display: inline-block;
+    border: 1px solid rgba(40, 99, 117, 0.712);
+    padding: 0px 3px;
+    margin: auto 2px;
+    background: #ffffff;
+    border-radius: 20px;
+    color: white;
+    margin-left: 4px;
+    transform:scale(0.7);
+}
+.protyle-wysiwyg [data-node-id][custom-function="important"] div[contenteditable="true"]:after,
+.protyle-wysiwyg [data-node-id][custom-function="zy"] div[contenteditable="true"]:after,
+.protyle-wysiwyg [data-node-id][custom-f="important"] div[contenteditable="true"]:after,
+.protyle-wysiwyg [data-node-id][custom-f="zy"] div[contenteditable="true"]:after{
+    content: "❕❕❕";
+    display: inline-block;
+    height: 2rem;
+    padding: 0px 7px;
+    margin: auto 2px;
+    background:#ff5722;
+    border-radius: 15px;
+    color: black;
+    transform:scale(0.7);
+}
+
+
+.protyle-wysiwyg [data-node-id][custom-function="kaiti"],
+.protyle-wysiwyg [data-node-id][custom-f="kaiti"]{
+        font-family: kaiti;
+}
+
+.protyle-wysiwyg [data-node-id][custom-function="quote"],
+.protyle-wysiwyg [data-node-id][custom-f="quote"] {
+    background-color: var(--b3-card-success-background);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.protyle-wysiwyg [data-node-id][custom-function="quote"]:before,
+.protyle-wysiwyg [data-node-id][custom-f="quote"]:before {
+    content:"📌";
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    
+}
+.protyle-wysiwyg [data-node-id][custom-function="quote"] [contenteditable="true"],
+.protyle-wysiwyg [data-node-id][custom-f="quote"] [contenteditable="true"]{
+        display: inline-block;
+        margin-top: 0px;
+        margin-left: 1em;
+        /* width:calc(100% - 40px); */
+}
+
+/* -----------------------------------------------f:table列表转化为表格------------------------------------------- */
+/* 设置整个列表表格的缩进 */
+.list[data-node-id][data-type="NodeList"][custom-f="table"],
+.list[data-node-id][data-type="NodeList"][custom-f="bg"] {
+    padding: 4px;
+}
+
+/* 所有子项目的表格（除去第一列其余的列），包含溢出的空白部分，所以才会有边框*/
+.protyle-wysiwyg *[custom-f="table"] .li .list,
+.protyle-wysiwyg *[custom-f="bg"] .li .list {
+    padding: 0px;
+    margin: 0px !important;
+    width: 80%;
+    outline: 1px solid #bbc9be;
+    /* flex-direction:row; */
+}
+
+/* 对所有子列表项设置格式*/
+.protyle-wysiwyg *[custom-f="table"] .li,
+.protyle-wysiwyg *[custom-f="bg"] .li {
+    display: flex;
+    outline: 1px solid #bbc9be;
+    border-radius: 0px;
+    background-color: var(--b3-theme-background);
+    background-image: url('../src/paper.png');
+    /* background-color: transparent; */
+}
+
+/* 调整每个子列表项右侧边距 */
+.protyle-wysiwyg *[custom-f="table"] .li>div,
+.protyle-wysiwyg *[custom-f="bg"] .li>div {
+    margin-right: 6px;
+}
+
+
+.protyle-wysiwyg *[custom-f="table"] [data-node-id].li>[data-node-id],
+.protyle-wysiwyg *[custom-f="bg"] [data-node-id].li>[data-node-id] {
+    margin-left: 20px !important;
+}
+
+/* 对符号后文字设置格式 */
+.protyle-wysiwyg *[custom-f="table"] .p,
+.protyle-wysiwyg *[custom-f="bg"] .p {
+    flex: 1;
+    text-align: left;
+    align-items: center;
+    display: flex;
+    min-width: calc(25%);
+    height: auto;
+    margin: 0;
+    text-align: justify;
+}
+
+.protyle-wysiwyg [data-subtype="o"][custom-f="table"] .p div,
+.protyle-wysiwyg [data-subtype="o"][custom-f="bg"] .p div {
+    margin-left: 7px !important;
+}
+
+.protyle-wysiwyg *[custom-f="table"] .li>.list>.li,
+.protyle-wysiwyg *[custom-f="bg"] .li>.list>.li {
+    outline: none !important;
+    border-top: 1px solid #bbc9be;
+}
+
+.protyle-wysiwyg *[custom-f="table"] .li>.list>.li:first-of-type,
+.protyle-wysiwyg *[custom-f="bg"] .li>.list>.li:first-of-type {
+    border-top: none;
+}
+
+/* 去除小竖线*/
+.list[data-node-id][data-type="NodeList"][custom-f="table"] .li>:before,
+.list[data-node-id][data-type="NodeList"][custom-f="bg"] .li>:before {
+    display: none;
+}
+
+/*设置前面的符号居中对齐 */
+.list[data-node-id][data-type="NodeList"][custom-f="table"] .protyle-action,
+.list[data-node-id][data-type="NodeList"][custom-f="bg"] .protyle-action {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 20px;
+}
+
+/* 表格设置为100%宽度，即填充整个空间*/
+.protyle-wysiwyg *[custom-f="table"] .table,
+.protyle-wysiwyg *[custom-f="bg"] .table {
+    width: 100%;
+}
+
+/* ---------------------------------------------------------列表转化为表格 END-------------------------------------------------- */
+
+/* f:scroll 表格和代码块控制宽度------------------------------------------ */
+.protyle-wysiwyg:not([id="preview"])  [data-node-id][custom-f~=scroll].code-block::-webkit-scrollbar-thumb,
+.protyle-wysiwyg:not([id="preview"]) [data-node-id][custom-f~=scroll][data-type="NodeTable"]  ::-webkit-scrollbar-thumb{
+    border-left:solid 0px transparent
+}
+/* 为指定块添加纵向滚动条 */
+.protyle-wysiwyg:not([id="preview"]) [data-node-id][custom-f~=scroll].code-block {
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.protyle-wysiwyg:not([id="preview"]) [data-node-id][custom-f~=scroll][data-type="NodeTable"] table {
+    position: relative;
+    overflow-y: auto;
+    max-height: 50vh;
+}
+
+.protyle-wysiwyg:not([id="preview"]) [data-node-id][custom-f~=scroll][data-type="NodeTable"] table>thead {
+    position: sticky;
+    top: 1px;
+    z-index: 1;
+}

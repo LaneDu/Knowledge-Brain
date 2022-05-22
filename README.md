@@ -18,6 +18,13 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/lanedu/Knowledge-Brain)
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hy/lanedu/Knowledge-Brain?label=hits)
 
+### 5月22日更新添加视图转换
+
+看了下其他主题，发现有可以实现视图的转换功能，列表可以转脑图、表格、看板，挺不错的就从tsundoku light里面copy了过来了，稍微修改了一下
+
+1. 去掉了代码块的背景色
+2. 添加列表的选择视图功能
+
 ### 5月13日更新
 
 从思源2.+版本好像出现了代码行号语言位置显示问题，一直没更新思源加上比较忙也没怎么关注
