@@ -18,6 +18,13 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/lanedu/Knowledge-Brain)
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hy/lanedu/Knowledge-Brain?label=hits)
 
+### 8月20日
+1、修复了没有地址图标的地址图标的默认地址图标问题
+2、实际上有些主题加了一些很好的功能，等有时间再借鉴考虑添加一下
+3、近一年内没什么时间，准备考一些证
+4、知乎算是用的比较多的,可能偶尔写两篇文章[杜莱](https://www.zhihu.com/people/lanedu)
+
+
 ### 5月22日更新添加视图转换
 
 看了下其他主题，发现有可以实现视图的转换功能，列表可以转脑图、表格、看板，挺不错的就从tsundoku light里面copy了过来了，稍微修改了一下
