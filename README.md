@@ -2,8 +2,6 @@
 
 > 主题的名字Knowledge Brain 寓意知识大脑
 >
-> 若感觉主题不错，订阅思源的时候可以支持一下，订阅推荐码：X0sndna
->
 > 若有什么问题可以在思源社区或者GitHub提issue。
 >
 > 若对于模板有需求的可以看一下Me，里面有一些好东西，随机234张4K高清精美图片的模板、Live2d动态二次元角色和音乐播放器模板及**各种类型的目录显示**等
@@ -17,6 +15,10 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/lanedu/Knowledge-Brain)
 ![GitHub repo size](https://img.shields.io/github/repo-size/lanedu/Knowledge-Brain)
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hy/lanedu/Knowledge-Brain?label=hits)
+
+### 10月12日
+1、发现市场没有了该主题，再次更新上去
+2、修改下字体颜色
 
 ### 8月20日
 1、修复了没有地址图标的地址图标的默认地址图标问题
