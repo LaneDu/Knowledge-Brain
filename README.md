@@ -16,6 +16,10 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/lanedu/Knowledge-Brain)
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hy/lanedu/Knowledge-Brain?label=hits)
 
+
+### 10月21日
+1、发现表格不换行的话如果内容太多就不方便，改成换行的
+2、表格样式调整成带一点绿色（健康色）
 ### 10月12日
 1、发现市场没有了该主题，再次更新上去
 2、修改下字体颜色

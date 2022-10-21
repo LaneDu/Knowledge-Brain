@@ -318,67 +318,50 @@
 }
 
 /* -------------------------------表格------------------------------------- */
+
 /* -------------------------------表格start------------------------------------- */
-/* 设置表格不折叠，表格宽度100%，代码来自于rem craft主题 */
- .b3-typography table,
-.b3-typography .protyle-wysiwyg table,
-.protyle-wysiwyg .b3-typography table,
-.b3-typography .table table,
+/* 表格100%宽度 */
 .protyle-wysiwyg table,
-.protyle-wysiwyg .table table{
-    display:table;
-    /* width:100%; */
-} 
-/* table{
-    border-collapse: collapse !important;
+.b3-typography table {
     display: table;
     width: 100%;
-} */
+}
+
+/* 表格居中的自定义属性 */
+div.table[data-node-id][custom-table~=center] {
+    margin: 0 auto !important;
+}
+
 
 /* 设置表头区域顶部边框，使表格更明显 */
-/* table thead{
-    border-top: 3px solid #cf5659 !important;
+/* table thead {
+    border-top: 0.15em solid var(--b3-theme-primary) !important;
 } */
+
 
 /*设置表格表头样式，颜色，背景，加粗，居中对齐*/
 table th {
-    font-weight: bold; 
-    text-align: center !important; 
-    /* color: #cf5659 !important;  */
-    background-color: #ffebeb;
- 
+    font-weight: bold;
+    text-align: center;
+    color: var(--b3-theme-primary);
+    background-color: var(--b3-table-th-color);
 }
 
 /* 设置表格内部边框 */
-th,td {
+th, td {
     min-width: 1em;
-    border:1.0px solid #0000002a !important; 
+    border: 0.05em solid var(--b3-table-border-color) !important;
     border-collapse: collapse;
     color: inherit;
 }
 
-/* 表格奇偶行不同颜色 */
-tbody tr:nth-child(2n + 1) {
-    background-color: white;
-}
-tbody tr:nth-child(2n) {
-    background-color: white;
-}
-
-/* 设置表格表头/首行不换行 */
-table th {
-    white-space: nowrap;
-}
-/* 设置表格首列不换行 */
-table td:nth-child(1) {
-    white-space: nowrap; 
-} 
 
 /* 设置表格行悬浮高亮 */
-/* table tr:hover {
-    background: #ffebeb !important; 
-    color: #cf5659 !important;
-} */
+table tr:hover {
+    background: rgb(238, 249, 243)!important;
+    /* color: var(--b3-theme-primary) !important; */
+}
+
 /* -------------------------------表格end------------------------------------- */
 
 /* -------------------------------行内块字体样式-------------------------------------- */
