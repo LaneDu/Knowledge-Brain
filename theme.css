@@ -1545,10 +1545,19 @@ iframe {
     padding: 5px 6px 5px;
 }
 
-/***修改dock栏的宽度***/
+/***20221021-修改dock栏的宽度***/
 .dock--vertical {
     width: 38px;
     flex-direction: column;
     height: 100%;
     padding: 0;
+}
+svg {
+    color: black;
+    fill: currentColor;
+    display: inline-block;
+}
+
+.dock__item--activefocus {
+    background-color: rgba(170, 210, 237, 0.603) !important;
 }
