@@ -1552,12 +1552,21 @@ iframe {
     height: 100%;
     padding: 0;
 }
-svg {
-    color: black;
+.dock__item--activefocus {
+    background-color: rgba(170, 210, 237, 0.603) !important;
+}
+.dock--vertical svg {
+    color: rgba(0, 0, 0, 0.5);
+    fill: currentColor;
+    display: inline-block;
+}
+.toolbar svg {
+    color: rgba(0, 0, 0, 0.5);
     fill: currentColor;
     display: inline-block;
 }
 
-.dock__item--activefocus {
-    background-color: rgba(170, 210, 237, 0.603) !important;
-}
+
+/* .protyle-icons svg{
+    background-color: rgba(233, 100, 5, 0.244);
+} */
