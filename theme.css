@@ -23,14 +23,24 @@
 @import url("style/link_icon.css");
 /* 导入语雀提示区块 css */
 @import url("style/yuque.css");
+@font-face {
+    font-family: 'Win10 Emoji'; 
+    font-style: normal;
+    src: url('fonts/seguiemj.ttf');
+}
+ @font-face {
+    font-family: 'FiraCode';
+    font-style: normal;
+    src: url('fonts/FiraCode-Regular.ttf');
+} 
 @font-face{
-        font-family:"Noto Sans SC";
-        font-style: normal;
-        src:url("fonts/NotoSansSC-Regular.otf")}
+    font-family:"HarmonyOS Sans SC 01";
+    font-style: normal;
+    src:url("fonts/HarmonyOS_Sans_SC_Regular.ttf")}
 @font-face{
-        font-family:"JetBrains Mono";
-        font-style: normal;
-        src:url("fonts/JetBrainsMono-Regular.ttf")}
+    font-family:"JetBrains Mono 01";
+    font-style: normal;
+    src:url("fonts/JetBrainsMono-Regular.ttf")}
 :root {
     /* 主色 */
     /* 高亮 */
@@ -57,20 +67,18 @@
     /* 文字颜色 */
     --b3-theme-on-primary: #fff;
     --b3-theme-on-secondary: #fff;
-    /* 字体颜色 */
-    --b3-theme-on-background: #000000e6;
+    --b3-theme-on-background: #202124;
     /* 主要图标颜色 */
     --b3-theme-on-surface: #5f6368;
     --b3-theme-on-error: #fff;
 
     /* 字体 */
-
-    --b3-font-family-code: "JetBrains Mono", "Noto Sans SC", mononoki, Consolas, "Liberation Mono", Menlo, Courier, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
-    --b3-font-family: -apple-system, BlinkMacSystemFont, Segoe UI, "Noto Sans SC", "JetBrains Mono", "Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Hiragino Sans GB", "Microsoft Yahei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
+    --b3-font-family: "HarmonyOS Sans SC 01", "JetBrains Mono 01", "Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Hiragino Sans GB", "Microsoft Yahei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
+    --b3-font-family-code: "JetBrains Mono 01", "HarmonyOS Sans SC 01", mononoki, Consolas, "Liberation Mono", Menlo, Courier, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
     --b3-font-family-graph: mononoki;
     --b3-font-family-emoji: "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "Apple Color Emoji", "Twemoji Mozilla", "Noto Color Emoji", "Android Emoji";
     --b3-font-family-math: KaTeX_Math;
-   /* 线条 */
+    /* 线条 */
     /* --b3-border-color: #dfe0e1; */
     --b3-border-color: rgba(0, 0, 0, .1);
 
@@ -318,50 +326,67 @@
 }
 
 /* -------------------------------表格------------------------------------- */
-
 /* -------------------------------表格start------------------------------------- */
-/* 表格100%宽度 */
+/* 设置表格不折叠，表格宽度100%，代码来自于rem craft主题 */
+ .b3-typography table,
+.b3-typography .protyle-wysiwyg table,
+.protyle-wysiwyg .b3-typography table,
+.b3-typography .table table,
 .protyle-wysiwyg table,
-.b3-typography table {
+.protyle-wysiwyg .table table{
+    display:table;
+    /* width:100%; */
+} 
+/* table{
+    border-collapse: collapse !important;
     display: table;
     width: 100%;
-}
-
-/* 表格居中的自定义属性 */
-div.table[data-node-id][custom-table~=center] {
-    margin: 0 auto !important;
-}
-
-
-/* 设置表头区域顶部边框，使表格更明显 */
-/* table thead {
-    border-top: 0.15em solid var(--b3-theme-primary) !important;
 } */
 
+/* 设置表头区域顶部边框，使表格更明显 */
+/* table thead{
+    border-top: 3px solid #cf5659 !important;
+} */
 
 /*设置表格表头样式，颜色，背景，加粗，居中对齐*/
 table th {
-    font-weight: bold;
-    text-align: center;
-    color: var(--b3-theme-primary);
-    background-color: var(--b3-table-th-color);
+    font-weight: bold; 
+    text-align: center !important; 
+    /* color: #cf5659 !important;  */
+    background-color: #ffebeb;
+ 
 }
 
 /* 设置表格内部边框 */
-th, td {
+th,td {
     min-width: 1em;
-    border: 0.05em solid var(--b3-table-border-color) !important;
+    border:1.0px solid #0000002a !important; 
     border-collapse: collapse;
     color: inherit;
 }
 
-
-/* 设置表格行悬浮高亮 */
-table tr:hover {
-    background: rgb(238, 249, 243)!important;
-    /* color: var(--b3-theme-primary) !important; */
+/* 表格奇偶行不同颜色 */
+tbody tr:nth-child(2n + 1) {
+    background-color: white;
+}
+tbody tr:nth-child(2n) {
+    background-color: white;
 }
 
+/* 设置表格表头/首行不换行 */
+table th {
+    white-space: nowrap;
+}
+/* 设置表格首列不换行 */
+table td:nth-child(1) {
+    white-space: nowrap; 
+} 
+
+/* 设置表格行悬浮高亮 */
+/* table tr:hover {
+    background: #ffebeb !important; 
+    color: #cf5659 !important;
+} */
 /* -------------------------------表格end------------------------------------- */
 
 /* -------------------------------行内块字体样式-------------------------------------- */
@@ -962,42 +987,6 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     color: var(--b3-menu-highlight-focus-color);
 }
 
-/* 警告 */
-.b3-snackbar__content {
-    line-height: 20px;
-    border-radius: 4px;
-    padding: 8px 16px;
-    color: #fff;
-    font-size: inherit;
-    background-color: #ec8d8deb;
-    box-sizing: border-box;
-    box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%),
-        0 1px 18px 0 rgb(0 0 0 / 12%);
-    transition: transform 0.15s cubic-bezier(0, 0, 0.2, 1) 0ms;
-    transform: scale(0.8);
-    top: 16px;
-    position: absolute;
-    word-break: break-word;
-    max-width: 80vw;
-}
-
-.b3-snackbar__close {
-    position: absolute;
-    color: #fff;
-    font-size: 50%;
-    padding: 4px;
-    /* background-color: bisque; */
-    background: #ec8d8deb;
-    border-radius: 16px;
-    cursor: pointer;
-    top: 2px;
-}
-
-.b3-snackbar__content svg:hover {
-    color: #fff;
-    transform: scale(1.1);
-}
-
 /* 设置列表选中取消背景色 */
 .b3-list-item.b3-list-item--big:hover,
 .b3-list-item.b3-list-item--big.b3-list-item--focus {
@@ -1083,11 +1072,7 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     /* 多窗口非活动窗口变暗 */
     background-color: #FFF;
     transition: background-color 0.5s linear;
-
-     /* 编辑窗口字体颜色 */
-     color: rgba(31,35,41,.8)
-    /* color: #000000e6; */
-
+    color: rgba(31,35,41,.8)
 }
 
 .block__popover--open .fn__flex-column .protyle-wysiwyg {
@@ -1100,7 +1085,6 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
 .layout__wnd--active .protyle-title .protyle-title__input{
     /* 当前编辑窗口保持主背景色 */
     background-color: var(--b3-theme-background);
-   
 }
 .layout-tab-bar{
     background-color: #f7f6f3;
@@ -1133,16 +1117,7 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     border-bottom: 2px solid transparent;
     /* filter: drop-shadow(2px 2px 3px #999); */
 }
-/* 选中的标签页下方的颜色 */
-.layout-tab-bar .item--focus:after {
-    content: "";
-    width: 100%;
-    height: 13px;
-    border-radius: 6px;
-	bottom: -7px;
-    position: absolute;
-    background-color: var(--b3-tab-custom-background) !important;
-}
+
 /* 未保存样式 */
 /* .layout__wnd--active .layout-tab-bar .item--unsave {
     border-bottom: 2px solid #c7d1d8c5;
@@ -1545,28 +1520,3 @@ iframe {
     padding: 5px 6px 5px;
 }
 
-/***20221021-修改dock栏的宽度***/
-.dock--vertical {
-    width: 38px;
-    flex-direction: column;
-    height: 100%;
-    padding: 0;
-}
-.dock__item--activefocus {
-    background-color: rgba(170, 210, 237, 0.603) !important;
-}
-.dock--vertical svg {
-    color: rgba(0, 0, 0, 0.5);
-    fill: currentColor;
-    display: inline-block;
-}
-.toolbar svg {
-    color: rgba(0, 0, 0, 0.5);
-    fill: currentColor;
-    display: inline-block;
-}
-
-
-/* .protyle-icons svg{
-    background-color: rgba(233, 100, 5, 0.244);
-} */

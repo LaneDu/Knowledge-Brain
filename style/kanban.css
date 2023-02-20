@@ -13,7 +13,7 @@
     width: 100% !important;
     overflow-x: auto;
     /*溢出滚动*/
-    padding-bottom: 50px;
+    padding-bottom: 20px;
 }
 
 /* ————————————————————所有子项目的表格（除去第一列其余的列），包含溢出的空白部分，所以才会有边框—————————————————————— */

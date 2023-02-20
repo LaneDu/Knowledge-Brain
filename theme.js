@@ -226,6 +226,7 @@ setInterval(changeFamily, 1000);
     loadScript("/appearance/themes/Knowledge Brain/script/module/goto.js");
     loadScript("/appearance/themes/Knowledge Brain/script/module/style.js");
     loadScript("/appearance/themes/Knowledge Brain/script/module/timestamp.js");
+    loadScript("/appearance/themes/Knowledge Brain/script/calendar/calendar.js");
 
     // loadScript("/appearance/themes/Dark+/script/test/listener.js");
 })();
