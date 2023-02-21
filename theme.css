@@ -223,10 +223,12 @@
     --b3-table-tr2n-color: #ffffff;
     /* 高亮 */
     --b3-menu-highlight-color: #068eb8;
-    --b3-menu-highlight-focus-color: #34495e;
+    --b3-menu-highlight-focus-color: #1f81e3;
+    /* --b3-menu-highlight-focus-color: #34495e; */
     /* 文件树背景高亮颜色 */
     --b3-menu-highlight-background: #fff;
     --b3-tab-custom-background: #fff;
+    
 }
 
 .render-node[data-subtype='graphviz'] .graph > polygon {
@@ -1519,4 +1521,28 @@ iframe {
     margin-right: 10px;
     padding: 5px 6px 5px;
 }
-
+/* siyuan设置的字体 */
+#toolbar .toolbar__item#barWorkspace .toolbar__text {
+    font-weight: 600;
+    font-size: 13px;
+    color:#1c01016a;
+}
+/**标签页的高度***/
+.layout-tab-bar .item {
+    line-height: 16px;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    transition: var(--b3-transition);
+    min-height: 32px;
+    position: relative;
+    max-width: 186px;
+    flex-shrink: 0;
+    overflow: hidden;
+    height: 20px;
+}
+/*****工具栏聚焦颜色********/
+#toolbar .toolbar__item:hover {
+    background-color: #DFE0E1
+}

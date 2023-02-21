@@ -18,9 +18,11 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/lanedu/Knowledge-Brain)
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hy/lanedu/Knowledge-Brain?label=hits)
 
-### 2023年2月20日更新
+### 2023年2月21日更新
 1. 修复右上角通知信息不显示错误
 1. 添加日记日历面板
+2.   更新标签页高度
+3.   修改设置的字体聚焦颜色
 
 ### 5月22日更新添加视图转换
 
