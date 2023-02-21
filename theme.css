@@ -1092,9 +1092,9 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     background-color: #f7f6f3;
 }
 /*tab on focus*/
-.layout-tab-bar:hover {
+/* .layout-tab-bar:hover {
     background-color: #fff;
-}
+} */
 /*未选中的标签页*/
 .layout-tab-bar .item {
     padding: 4px 4px 4px 14px;
