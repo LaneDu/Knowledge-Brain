@@ -1546,3 +1546,15 @@ iframe {
 #toolbar .toolbar__item:hover {
     background-color: #DFE0E1
 }
+/*****选择的标签页下面的蓝条居中,隐藏掉吧****/
+.layout-tab-bar .item--focus:after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    bottom: 0;
+    position: absolute;
+    background-color: var(--b3-theme-background-light);
+    left: 1px;
+    display: none;
+}
