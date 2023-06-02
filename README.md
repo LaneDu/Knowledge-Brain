@@ -2,15 +2,7 @@
 
 > 主题的名字Knowledge Brain 寓意知识大脑
 >
-> 若感觉主题不错，订阅思源的时候可以支持一下，订阅推荐码：X0sndna
->
-> 若有什么问题可以在思源社区或者GitHub提issue。
->
-> 若对于模板有需求的可以看一下Me，里面有一些好东西，随机234张4K高清精美图片的模板、Live2d动态二次元角色和音乐播放器模板及**各种类型的目录显示**等
->
-> 我本后端，奈何前端，目前集市已百花齐放
->
-> 感谢集市上的主题如Tundoku、Dark+、RemCraft 可以让我借鉴（Copy）一些样式
+
 
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/release/lanedu/Knowledge-Brain?include_prereleases)
 ![GitHub](https://img.shields.io/github/license/lanedu/Knowledge-Brain)
@@ -18,6 +10,8 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/lanedu/Knowledge-Brain)
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hy/lanedu/Knowledge-Brain?label=hits)
 
+### 2023年6月2日更新
+修复了同步图标，鼠标不聚焦变黑的问题
 ### 2023年2月21日更新
 1. 修复右上角通知信息不显示错误
 1. 添加日记日历面板

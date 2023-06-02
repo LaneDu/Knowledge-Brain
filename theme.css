@@ -984,6 +984,7 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     background-color: var(--b3-menu-highlight-background);
     color: var(--b3-menu-highlight-color);
 }
+
 .protyle-toolbar__item--current,
 .protyle-toolbar__item--current:hover {
     color: var(--b3-menu-highlight-focus-color);
@@ -1544,6 +1545,10 @@ iframe {
 }
 /*****工具栏聚焦颜色********/
 #toolbar .toolbar__item:hover {
+    background-color: #DFE0E1
+}
+/***同步中的非hover的颜色变黑***/
+.toolbar__item--active {
     background-color: #DFE0E1
 }
 /*****选择的标签页下面的蓝条居中,隐藏掉吧****/
