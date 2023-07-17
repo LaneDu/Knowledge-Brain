@@ -1,0 +1,28 @@
+name: Release
+
+on:
+    push:
+        tags:
+            - 'v*'
+
+jobs:
+    release:
+        name: Create Release
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Package
+              run: |
+                  zip -r package.zip app asset plugin script theme util icon.png index.js preview.png README_en_US.md README.md theme.css theme.js theme.json
+<<<<<<< HEAD
+
+=======
+>>>>>>> 5eb4c003d2cfd421cbf1cf900a56b2f890e5b31b
+            - name: Release
+              uses: ncipollo/release-action@v1
+              with:
+                  allowUpdates: true
+                  artifactErrorsFailBuild: true
+                  artifacts: 'package.zip'
+                  token: ${{ secrets.GITHUB_TOKEN }}
