@@ -3,6 +3,30 @@
   "author": "lane",
   "url": "https://github.com/LaneDu/Knowledge-Brain",
   "version": "3.0.0",
+  "displayName": {
+    "default": "Savor",
+    "zh_CN": "写未"
+  },
+  "description": {
+    "default": "You can only remember index ,it‘s your second brain",
+    "zh_CN": "你的大脑只需要记住索引，第二大脑来记忆知识"
+  },
+  "readme": {
+    "default": "README.md",
+    "zh_CN": "README_zh_CN.md"
+  },
+  "i18n": [
+    "en_US",
+    "zh_CN"
+  ],
+  "funding": {
+    "openCollective": "",
+    "patreon": "",
+    "github": "",
+    "custom": [
+      "https://afdian.net/a/knowledgebrain"
+    ]
+  },
   "modes": [
     "light"
   ]
