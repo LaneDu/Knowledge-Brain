@@ -1,7 +1,6 @@
 ##  主题名称 Knowledge Brain
 
 > 主题的名字Knowledge Brain 寓意知识大脑
->
 
 
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/release/lanedu/Knowledge-Brain?include_prereleases)
@@ -10,8 +9,17 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/lanedu/Knowledge-Brain)
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hy/lanedu/Knowledge-Brain?label=hits)
 
-### 2023年6月2日更新
-修复了同步图标，鼠标不聚焦变黑的问题
+### 2023年7月17日更新
+1. 修复了思源2.9.5导致的所有预览的背景色变成了黑色
+2.   调整了同步按钮在同步中的颜色
+3.   调整了整体的字体颜色为black
+4.   删除了主题上的日历按钮，现在有插件了
+5.   调整了下siyuan的工作空间字体颜色
+6.   好久没更新了，思源变化的好快
+7.   昨天更新了下我的[语雀](https://www.yuque.com/lanedu)主页
+8.   碎碎念，不定时更新
+
+
 ### 2023年2月21日更新
 1. 修复右上角通知信息不显示错误
 1. 添加日记日历面板

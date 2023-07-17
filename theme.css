@@ -23,7 +23,7 @@
 @import url("style/link_icon.css");
 /* 导入语雀提示区块 css */
 @import url("style/yuque.css");
-@font-face {
+/* @font-face {
     font-family: 'Win10 Emoji'; 
     font-style: normal;
     src: url('fonts/seguiemj.ttf');
@@ -40,7 +40,7 @@
 @font-face{
     font-family:"JetBrains Mono 01";
     font-style: normal;
-    src:url("fonts/JetBrainsMono-Regular.ttf")}
+    src:url("fonts/JetBrainsMono-Regular.ttf")} */
 :root {
     /* 主色 */
     /* 高亮 */
@@ -551,7 +551,7 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
 .protyle-wysiwyg code:not(.hljs) {
     padding: 0.2em 0.4em;
     margin: 0;
-    font-size: 85%;
+    font-size: 95%;
     border-radius: 5px;
     font-family: var(--b3-font-family-code);
     word-break: break-word;
@@ -676,39 +676,6 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     color: var(--b3-theme-primary) !important;
 }
 
-/* 无序列表 */
-/* 暂时取消无序列表特殊样式 */
-/* .protyle-wysiwyg [data-subtype='u'] > .protyle-action svg {
-    opacity: 0;
-}
-.b3-typography li {
-    position: relative;
-}
-.b3-typography ul>li {
-    list-style-type: none;
-}
-.protyle-wysiwyg [data-node-id].li {
-    position: relative;
-} */
-/* 无序列表小圆点样式 */
-/* .protyle-wysiwyg [data-subtype='u'] > .protyle-action:before,.b3-typography ul>li::before{
-    content: '';
-    position: absolute;
-    display: inline-block;
-    cursor: pointer;
-    width: 8px;
-    height: 8px;
-    vertical-align: middle;
-    text-align: center;
-    border: 0px;
-    border-radius: 0.6em;
-    background-color: #515e64;
-    top: 14.5px;
-    left: 13px;
-} */
-/* .b3-typography ul li::before {
-    left: -19px;
-} */
 /* 无序列表悬浮的小圆点 */
 .protyle-wysiwyg [data-subtype='u'] > .protyle-action:hover:before,
 .protyle-wysiwyg [data-node-id].li[fold="1"]>.protyle-action:before {
@@ -738,19 +705,6 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     opacity: 0.5;
     text-decoration: line-through;
   }
-
-  
-
-
-/* 超级块 */
-/* .protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"] > div::after{
-    content:"";
-    display: block;
-    width:100%;
-    height:100%;
-    background-color: #fff;
-    border-right: 1px solid black;
-} */
 
 /* -------------------------------代码块样式-------------------------------------- */
 
@@ -867,30 +821,6 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     opacity: 1 !important;
 }
 
-/*代码复制的样式*/
-/* .b3-typography .code-block .protyle-action .protyle-action__language::after,
-.protyle-wysiwyg .code-block .protyle-action .protyle-action__language::after {
-    content: "›";
-    font-family: var(--b3-font-family-code);
-    color: #80808080;
-    opacity: 1;
-} */
-
-/* 复制和设置按钮样式 */
-/* .b3-typography .code-block .protyle-action .protyle-icon,
-.b3-typography .code-block .protyle-action .protyle-action__language,
-.protyle-wysiwyg .code-block .protyle-action .protyle-icon,
-.protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
-    opacity: 1 !important;
-    background-color: transparent !important;
-} */
-
-/* .b3-typography .code-block .protyle-action .protyle-icon svg,
-.b3-typography .code-block .protyle-action .protyle-action__language svg,
-.protyle-wysiwyg .code-block .protyle-action .protyle-icon svg,
-.protyle-wysiwyg .code-block .protyle-action .protyle-action__language svg {
-    color: gray;
-} */
 
 /* -----------------      外观样式 ----------------- */
 
@@ -1121,55 +1051,12 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     /* filter: drop-shadow(2px 2px 3px #999); */
 }
 
-/* 未保存样式 */
-/* .layout__wnd--active .layout-tab-bar .item--unsave {
-    border-bottom: 2px solid #c7d1d8c5;
-} */
-/* 调整选中标签页文字最大宽度 */
-/* .item--focus .item__text {
-    max-width: 300px;
-} */
-/* 文字超出范围的模糊效果 */
-/* .layout-tab-bar .item--focus .item__text::after {
-    background: linear-gradient(110deg, rgba(0, 0, 0, 0.001), var(--b3-theme-surface));
-    left: 294px;
-} */
-
-/* 标签页按钮 */
-/* .layout-tab-bar .item__close {
-    margin-left: 8px;
-    height: 8px;
-    width: 8px;
-    padding: 4px;
-    border-radius: 10px;
-    color: var(--b3-theme-on-surface);
-    transition: var(--b3-transition);
-    background-color: #eef4f7;
-} */
-
 /* 面包屑-标签页下面的路径背景色 */
 .protyle-breadcrumb {
     background-color: var(--b3-tab-custom-background);
     z-index: 2;
 }
 /*标签页结束*/
-/* .b3-dialog__container .b3-dialog__close {
-    color: #505964;
-    font-size: 50%;
-    cursor: pointer;
-    background: #fff;
-    border-radius: 16px;
-    padding: 4px;
-    margin-left: 22px;
-    height: 13px;
-    width: 13px;
-    transition: all 0.3s linear;
-}
-.b3-dialog__container svg:hover {
-    color: var(--b3-menu-highlight-color);
-    background: #fff;
-    transform: rotate(180deg);
-} */
 
 
 iframe {
@@ -1245,20 +1132,6 @@ iframe {
     border-left: 2px solid #184563b5;
     box-shadow: 0 0 2px #415f86;
 }
-/* 加一个小装饰，不过效果不太好 */
-/* .protyle-wysiwyg [data-node-id] .img .protyle-action__drag::before {
-    content: "";
-    width: 0;
-    height: 0;
-    border-radius: 10px;
-    border: 10px solid #2d7098ad;
-    border-color: transparent transparent transparent #2d7098ad;
-    position: absolute;
-    top: 50%;
-    left: 7px;
-} */
-
-
 
 /* 调整超级块中元素间距 */
 .protyle-wysiwyg .sb div[data-node-id]{
@@ -1522,17 +1395,18 @@ iframe {
     margin-right: 10px;
     padding: 5px 6px 5px;
 }
-/* siyuan设置的字体 */
+/* siyuan工作空间设置的字体 */
 #toolbar .toolbar__item#barWorkspace .toolbar__text {
     font-weight: 600;
     font-size: 13px;
-    color:#616162d1;
+    /* color:#3b3b3cd1; */
 }
+ 
+
 /**标签页的高度***/
 .layout-tab-bar .item {
     line-height: 16px;
     cursor: pointer;
-    user-select: none;
     display: flex;
     align-items: center;
     transition: var(--b3-transition);
@@ -1544,12 +1418,10 @@ iframe {
     height: 20px;
 }
 /*****工具栏聚焦颜色********/
-#toolbar .toolbar__item:hover {
-    background-color: #DFE0E1
-}
-/***同步中的非hover的颜色变黑***/
-.toolbar__item--active {
-    background-color: #DFE0E1
+ #toolbar .toolbar__item:hover {
+    /* background-color: #DFE0E1  */
+    
+    background-color:var(--b3-tooltips-color);
 }
 /*****选择的标签页下面的蓝条居中,隐藏掉吧****/
 .layout-tab-bar .item--focus:after {
@@ -1563,3 +1435,49 @@ iframe {
     left: 1px;
     display: none;
 }
+/***同步中的非hover的颜色变黑***/
+.toolbar__item--active[aria-label]{
+    color: white;
+    background-color:#3ca3ce;
+}
+ 
+/***2.9.5所有的onfous变成了黑色start***/
+.b3-tooltips::after {
+    color: white;
+    background-color:#3ca3ce;
+}
+
+.b3-tooltips__s::before, .b3-tooltips__se::before, .b3-tooltips__sw::before{
+    border-bottom-color: var(--b3-theme-primary);
+}
+
+.b3-tooltips__n::before, .b3-tooltips__ne::before, .b3-tooltips__nw::before {
+    border-top-color: var(--b3-theme-primary);
+}
+
+.b3-tooltips__e::before {
+    border-right-color: var(--b3-theme-primary);
+}
+
+.b3-tooltips__w::before {
+    border-left-color: var(--b3-theme-primary);
+}
+/* .b3-tooltips__w:: hover{
+    border-left-color: var(--b3-theme-primary);
+} */
+div#tooltip {
+    background-color:#3ca3ce;
+   color: var(--b3-theme-on-primary);
+} 
+ 
+/***2.9.5所有的onfous变成了黑色end***/
+
+ /*****整体编辑区字体颜色深度*******/
+ .b3-typography, .protyle-wysiwyg, .protyle-title{
+    color: black;
+ }
+ /*大纲列*/
+ .b3-list-item__text{
+    color: black;
+ }
+  /*****整体编辑区字体*******/
