@@ -9,10 +9,6 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/lanedu/Knowledge-Brain)
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hy/lanedu/Knowledge-Brain?label=hits)
 
-### 2023年7月22日更新
-1. 上次打包没有添加src文件导致link的图标没显示
-2. 导致新建文件图标没显示，等等sorry
-
 ### 2023年7月17日更新
 1. 修复了思源2.9.5导致的所有预览的背景色变成了黑色
 2.   调整了同步按钮在同步中的颜色
