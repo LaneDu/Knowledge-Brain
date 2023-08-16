@@ -1,6 +1,10 @@
 ##  主题名称 Knowledge Brain
 
 > 主题的名字Knowledge Brain 寓意知识大脑
+> 
+> 欢迎访问我的 [语雀数字花园](https://www.yuque.com/lanedu)
+> 
+> 下载我的其他主题 Knowledge Show 一款夜间最炫的主题
 
 
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/release/lanedu/Knowledge-Brain?include_prereleases)
@@ -9,6 +13,9 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/lanedu/Knowledge-Brain)
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hy/lanedu/Knowledge-Brain?label=hits)
 
+### 2023年8月16日更新
+1. 修复了新建文档+位置错位的问题
+2. 修复了双击点开图片后，操作按钮如旋转等的背景色全黑遮住了图标
 
 ### 2023年7月22日更新
 1. 上次打包没有添加src文件导致link的图标没显示

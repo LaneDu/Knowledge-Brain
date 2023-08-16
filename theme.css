@@ -1332,7 +1332,7 @@ iframe {
     background-image: url(src/add.svg);
     background-size: 15px 15px;
     background-repeat: no-repeat;
-    background-position: left 1px top 6px;
+    background-position: center;
 }
 .file-tree [data-type="new"]:hover{
     background-color: #d3e2e671;
@@ -1481,3 +1481,10 @@ div#tooltip {
     color: black;
  }
   /*****整体编辑区字体*******/
+
+
+  /*****双击图片之后的图标背景色**********/
+  .viewer-toolbar>ul>li{
+     /* background-color: #B5B3B3; */
+     background-color: #e3e3cf;
+  }
