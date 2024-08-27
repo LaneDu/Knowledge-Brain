@@ -15,7 +15,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/lanedu/Knowledge-Brain)
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hy/lanedu/Knowledge-Brain?label=hits)
 
-### 2024年8月16日更新
+### 2024年8月27日更新
 1. 调整了预览块提示词详细的字体颜色
 2. 调整了图图片放大百分比字体的颜色和背景色
 3. 调整了文档树的字体和间隔
