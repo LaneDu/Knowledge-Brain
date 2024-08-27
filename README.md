@@ -3,6 +3,8 @@
 > 主题的名字Knowledge Brain 寓意知识大脑
 > 
 > 欢迎访问我的 [语雀数字花园](https://www.yuque.com/lanedu)
+> 欢迎访问我的 [B站](https://space.bilibili.com/85894775）
+
 > 
 > 下载我的其他主题 Knowledge Show 一款夜间最炫的主题
 
@@ -12,6 +14,14 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/lanedu/Knowledge-Brain)
 ![GitHub repo size](https://img.shields.io/github/repo-size/lanedu/Knowledge-Brain)
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hy/lanedu/Knowledge-Brain?label=hits)
+
+### 2024年8月16日更新
+1. 调整了预览块提示词详细的字体颜色
+2. 调整了图图片放大百分比字体的颜色和背景色
+3. 调整了文档树的字体和间隔
+4. 最近我的语雀更新的蛮多的可以关注一下[语雀数字花园](https://www.yuque.com/lanedu)
+5. 准备拍vlog，可以关注下我的[B站](https://space.bilibili.com/85894775）或者视频号杜小萊，如果有人关注后面会分享下我怎么使用语雀、思源的，以及当初花费了三天三夜做的Notion模版
+
 
 ### 2023年8月16日更新
 1. 修复了新建文档+位置错位的问题

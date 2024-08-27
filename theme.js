@@ -17,6 +17,10 @@ function changeFamily() {
     body.style.fontFamily = family.innerHTML.substring(start + 13, length - 13);
 }
 
+window.destroyTheme = () => {
+    document.querySelector("#theme-color-style").remove();
+}
+
 /***js from Morgan***/
 /****************************思源API操作**************************/
 async function 设置思源块属性(内容块id, 属性对象) {
@@ -54,7 +58,7 @@ async function 解析响应体(response) {
         块标菜单.insertBefore(选择视图按钮(), 最后项);
         块标菜单.insertBefore(菜单分隔项(), 最后项);
     }
-    changeFamily();
+   // changeFamily();
 };
 
 选择视图按钮 = function () {
@@ -217,7 +221,7 @@ var 全局菜单定时器 = {};
     设置思源块属性(id, attrs);
 };
 
-setInterval(changeFamily, 1000);
+//(changeFamily, 1000);
 
 
 

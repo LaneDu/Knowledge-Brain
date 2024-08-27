@@ -234,6 +234,10 @@
 .render-node[data-subtype='graphviz'] .graph > polygon {
     fill: transparent;
 }
+/**侧边栏字体大小**/
+body{
+    font-size: 16px;
+}
 
 /* 主要背景色 */
 
@@ -835,6 +839,7 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
 .b3-list--background .b3-list-item:hover .b3-list-item__graphic {
     color: var(--b3-menu-highlight-color);
     /* background-color: var(--b3-list-hover); */
+    /* font-size: 16px; */
 
     
 }
@@ -1487,4 +1492,17 @@ div#tooltip {
   .viewer-toolbar>ul>li{
      /* background-color: #B5B3B3; */
      background-color: #e3e3cf;
+  }
+/***********预览块的提示词颜色*****************/
+  span.ft__on-surface {
+    /* font-style: #ffffff; */
+    /* background-color: #068eb8; */
+    color: #dadada !important; 
+
+  }
+/***********图片打开后显示图片百分比字体颜色背景*****************/
+  .viewer-tooltip {
+    background-color: #068eb8;
+    color: #ffffff !important; 
+
   }
