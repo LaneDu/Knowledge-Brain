@@ -16,6 +16,16 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/lanedu/Knowledge-Brain)
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hy/lanedu/Knowledge-Brain?label=hits)
 
+### 2024年8月28日更新
+
+1. 修复了图标搜索界面显示异常
+
+2. 修复了图标和标题重叠的问题
+
+3. 第二个问题修复了3个小时，陷入了误区
+
+4. 社区有人提的问题，看到就修复了
+
 ### 2024年8月27日更新
 
 1. 调整了预览块提示词详细的字体颜色
