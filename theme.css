@@ -1495,13 +1495,20 @@ div#tooltip {
      /* background-color: #B5B3B3; */
      background-color: #e3e3cf;
   }
-/***********预览块的提示词颜色*****************/
-  span.ft__on-surface {
+    /***********快捷键设置，文字显示的颜色*****************/
+    /* .config-keymap div.b3-list-item>.b3-list-item__text {
+        color: #202124 !important; 
+    
+      } */
+     
+/***********写点什么前面，预览块的提示词颜色*****************/
+ span.ft__on-surface:not(.b3-list-item__text) {
     /* font-style: #ffffff; */
     /* background-color: #068eb8; */
     color: #dadada !important; 
 
   }
+
 /***********图片打开后显示图片百分比字体颜色背景*****************/
   .viewer-tooltip {
     background-color: #068eb8;

@@ -16,6 +16,10 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/lanedu/Knowledge-Brain)
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hy/lanedu/Knowledge-Brain?label=hits)
 
+### 2024年8月29日更新
+
+1. 修复了设置界面快捷键下文字颜色
+
 ### 2024年8月28日更新
 
 1. 修复了图标搜索界面显示异常
