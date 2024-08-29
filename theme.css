@@ -955,7 +955,7 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     outline: 0;
     text-decoration: none;
     /* text-decoration: underline; */
-    color: #328eb6;
+    /* color: #328eb6; */
     font-weight: 500;
 }
 .b3-dialog__container a:hover,
@@ -1447,6 +1447,11 @@ iframe {
     color: white;
     background-color:#3ca3ce;
 }
+/* .toolbar__item:not(.toolbar__item--disabled):not(.toolbar__item--close):hover, .toolbar__item--active {
+    color: white !important;
+    background-color:#3ca3ce !important;
+} */
+
  
 /***2.9.5所有的onfous变成了黑色start***/
 .b3-tooltips::after {
@@ -1486,6 +1491,7 @@ div#tooltip {
  /*大纲列*/
  .b3-list-item__text{
     color: black;
+    font-size: 15px;
  }
   /*****整体编辑区字体*******/
 
@@ -1501,13 +1507,26 @@ div#tooltip {
     
       } */
      
-/***********写点什么前面，预览块的提示词颜色*****************/
- span.ft__on-surface:not(.b3-list-item__text) {
+/***********写点什么前面，预览块的提示词颜色非搜索，非快捷键，非主题名称*****************/
+ span.ft__on-surface:not(.b3-list-item.b3-list-item--narrow.toggle>.ft__on-surface):not(.ft__on-surface.ft__smaller):not(#searchResult>.ft__on-surface) {
     /* font-style: #ffffff; */
     /* background-color: #068eb8; */
+    /* color: #ffffffa5!important; */
+ 
+
     color: #dadada !important; 
 
   }
+  /***********写文件大小kb的颜色****************/
+  small.ft__on-surface{
+    color: #fffdfd!important;
+    
+}
+  /* .b3-list-item__text.ariaLabel > span.ft__on-surface {
+    color: #da4242 !important; 
+  } */
+
+
 
 /***********图片打开后显示图片百分比字体颜色背景*****************/
   .viewer-tooltip {

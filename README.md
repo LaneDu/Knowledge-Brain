@@ -16,7 +16,17 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/lanedu/Knowledge-Brain)
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hy/lanedu/Knowledge-Brain?label=hits)
 
-### 2024年8月28日更新
+
+### 2024年8月29日更新2
+
+1. 修复了搜索颜色浅
+
+2. 修复了主题名称字体显示浅
+
+3. 调整了文档大小kb的显示颜色
+
+
+### 2024年8月29日更新1
 
 1. 修复了设置界面快捷键下文字颜色
 
