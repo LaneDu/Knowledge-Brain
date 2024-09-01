@@ -1508,7 +1508,7 @@ div#tooltip {
       } */
      
 /***********写点什么前面，预览块的提示词颜色非搜索，非快捷键，非主题名称*****************/
- span.ft__on-surface:not(.b3-list-item.b3-list-item--narrow.toggle>.ft__on-surface):not(.ft__on-surface.ft__smaller):not(#searchResult>.ft__on-surface) {
+ span.ft__on-surface:not(.b3-list-item.b3-list-item--narrow.toggle>.ft__on-surface):not(.ft__on-surface.ft__smaller):not(#searchResult>.ft__on-surface):not(.status__counter>.ft__on-surface) {
     /* font-style: #ffffff; */
     /* background-color: #068eb8; */
     /* color: #ffffffa5!important; */
