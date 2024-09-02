@@ -756,15 +756,30 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
 
 
 /*  代码块行数*/
-.protyle-linenumber__rows {
-    margin-top: 14px !important;
+/* .protyle-linenumber__rows { */
+    /* margin-top: 14px !important; */
     /* background-color: var(--b3-protyle-code-background) !important; */
-    font-size:14px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
+    /* font-size:14px; */
+    /* padding-bottom: 0px; */
+    /* margin-bottom: 0px; */
     /* font-family: var(--b3-font-family-code); */
     
+/* } */
+/*  代码块行数错位调整 20240902*/
+
+.rotyle-linenumber__rows {
+    pointer-events: none;
+    user-select: none;
+    counter-reset: linenumber;
+    font-size: 85%;
+    box-sizing: border-box;
+    font-family: var(--b3-font-family-code);
+    margin-right: 1em;
+    min-width: 1.2em;
+    text-align: right;
 }
+
+
 
 /*代码行竖线**/
 /* .protyle-linenumber__rows::before{
@@ -1534,6 +1549,7 @@ div#tooltip {
     color: #ffffff !important; 
 
   }
+
 
   /***********图标和标题重叠*****************/
 
