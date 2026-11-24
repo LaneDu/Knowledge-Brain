@@ -101,6 +101,11 @@
     /* --b3-tooltips-color:rgb(144, 179, 207); */
     /* --b3-tooltips-color:rgba(29, 140, 231, 0.774); */
     /* --b3-tooltips-color: #88adb8d2; */
+
+    /* 提示框里的次要文字（如侧栏图标提示里的“展开/最小化”“调整位置”）。
+       官方默认值 #7d7c7a 是给深色提示框配的，本主题提示框是蓝底 #3ca3ce，
+       灰字放上去几乎融进背景；这里换成偏白的浅蓝，与白色主文字区分但同样清楚。 */
+    --b3-tooltips-second-color: #d9f0fa;
  
     /* 卡片背景 */
     --b3-card-error-color: rgb(97, 26, 21);
@@ -1136,7 +1141,11 @@ iframe {
 /* 图片大小调整手柄 */
 /* 目前会飘 */
 
-.protyle-wysiwyg [data-node-id] .img .protyle-action__drag {
+/* 注意：3.8.9 起 .protyle-action__drag 这个类同时被“整图缩放框”(.protyle-image-resize)
+   和它的三个缩放手柄(.protyle-block-resize)复用。下面两条必须排除它们，
+   否则会把铺满整张图片的透明缩放框当成小竖条画成蓝色半透明块——
+   这就是升级 3.8.11 后图片像蒙了一层蓝色遮罩的原因。 */
+.protyle-wysiwyg [data-node-id] .img .protyle-action__drag:not(.protyle-image-resize):not(.protyle-block-resize) {
     width: 7px;
     height: 50%;
     background: #b4d9f0;
@@ -1147,10 +1156,24 @@ iframe {
     /* border-right: 2px solid black; */
     opacity:0.5;
 }
-.protyle-wysiwyg [data-node-id] .img .protyle-action__drag:hover {
+.protyle-wysiwyg [data-node-id] .img .protyle-action__drag:not(.protyle-image-resize):not(.protyle-block-resize):hover {
     background-color: #b4d9f0;
     border-left: 2px solid #184563b5;
     box-shadow: 0 0 2px #415f86;
+}
+
+/* 3.8.9+ 图片缩放手柄：缩放框本身保持完全透明，只让三个手柄显形 */
+.protyle-wysiwyg [data-node-id] .img .protyle-image-resize {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    opacity: 1 !important;
+}
+.protyle-wysiwyg [data-node-id] .img .protyle-block-resize {
+    color: #b4d9f0;
+}
+.protyle-wysiwyg [data-node-id] .img .protyle-block-resize:hover {
+    color: #184563b5;
 }
 
 /* 调整超级块中元素间距 */
@@ -1523,14 +1546,24 @@ div#tooltip {
       } */
      
 /***********写点什么前面，预览块的提示词颜色非搜索，非快捷键，非主题名称*****************/
- span.ft__on-surface:not(.b3-list-item.b3-list-item--narrow.toggle>.ft__on-surface):not(.ft__on-surface.ft__smaller):not(#searchResult>.ft__on-surface):not(.status__counter>.ft__on-surface) {
+ span.ft__on-surface:not(.b3-list-item.b3-list-item--narrow.toggle>.ft__on-surface):not(.ft__on-surface.ft__smaller):not(#searchResult>.ft__on-surface):not(.status__counter>.ft__on-surface):not(.tooltip .ft__on-surface) {
     /* font-style: #ffffff; */
     /* background-color: #068eb8; */
     /* color: #ffffffa5!important; */
  
 
-    color: #dadada !important; 
+    /* 原来是 #dadada，在白底上几乎看不见（设置→账号与同步 里的
+       “付费状态：相伴一生”和“流量统计”的数值都吃这条规则）。
+       改成中间灰：比正文浅、能看出是次要信息，但白底上仍然清晰可读。 */
+    color: #8e9297 !important; 
 
+  }
+
+  /* 提示框里的次要文字要跟着提示框自己的配色走，不能被上面那条“次要灰”规则盖掉
+     （上面已用 :not(.tooltip .ft__on-surface) 把提示框排除，这里只是补充兜底）。 */
+  .tooltip .ft__on-surface,
+  div#tooltip span.ft__on-surface {
+    color: var(--b3-tooltips-second-color);
   }
   /***********写文件大小kb的颜色****************/
   small.ft__on-surface{
