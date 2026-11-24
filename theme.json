@@ -2,7 +2,7 @@
   "name": "Knowledge Brain",
   "author": "lane",
   "url": "https://github.com/LaneDu/Knowledge-Brain",
-  "version": "3.6.1",
+  "version": "3.7.0",
   "displayName": {
     "default": "Knowledge Brain",
     "zh_CN": "知识大脑"
@@ -24,7 +24,7 @@
     "patreon": "",
     "github": "",
     "custom": [
-      "https://afdian.net/a/knowledgebrain"
+      "https://mp.weixin.qq.com/s/JIJwc9En4HtrNpJoObtbbg"
     ]
   },
   "modes": [
