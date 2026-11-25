@@ -2,7 +2,7 @@
   "name": "Knowledge Brain",
   "author": "lane",
   "url": "https://github.com/LaneDu/Knowledge-Brain",
-  "version": "3.7.0",
+  "version": "3.8.0",
   "displayName": {
     "default": "Knowledge Brain",
     "zh_CN": "知识大脑"
@@ -15,10 +15,6 @@
     "default": "README.md",
     "zh_CN": "README_zh_CN.md"
   },
-  "i18n": [
-    "en_US",
-    "zh_CN"
-  ],
   "funding": {
     "openCollective": "",
     "patreon": "",
